@@ -48,6 +48,20 @@ module.exports = function(grunt) {
                     cwd: __dirname
                 }
             }
+            prod: {
+                script: 'server.js',
+                options: {
+                    args: [],
+                    ignore: ['public/**'],
+                    ext: 'js',
+                    nodeArgs: ['--debug'],
+                    delayTime: 1,
+                    env: {
+                        PORT: 80
+                    },
+                    cwd: __dirname
+                }
+            }
         },
         concurrent: {
             tasks: ['nodemon', 'watch'],
