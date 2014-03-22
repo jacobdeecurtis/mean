@@ -3,20 +3,38 @@
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles', function ($scope, $stateParams, $location, Global, Articles) {
     $scope.global = Global;
 
+    //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
+    // $scope.attributes = new Array();
+    var blankAttribute = {attributeName: null, score: null, uom: null};
+             $scope.attributesArray = [blankAttribute]; 
+  
+    $scope.add_attribute = function() {
+        var newAttr = angular.copy(blankAttribute);
+        $scope.attributesArray.push(newAttr);
+    };
+
     $scope.create = function() {
         var article = new Articles({
-            title: this.title,
-            content: this.content
+            //"this" is the same thing as scope
+            name: this.name,
+            picture: this.picture,
+            attributes: this.attributesArray,
+            score: this.attributesArray.score
         });
+
         article.$save(function(response) {
             $location.path('articles/' + response._id);
         });
 
-        this.title = '';
-        this.content = '';
+        // this.name = '';
+        // this.image ='';
+        // this.attributes ='';
+        // this.scores ='';
+        // this.unitOfMeasurement ='';
+        
     };
 
-    $scope.remove = function(article) {
+ $scope.remove = function(article) {
         if (article) {
             article.$remove();
 
@@ -57,4 +75,5 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
             $scope.article = article;
         });
     };
+    
 }]);

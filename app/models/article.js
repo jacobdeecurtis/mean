@@ -15,16 +15,21 @@ var ArticleSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    title: {
+    name: {
         type: String,
         default: '',
         trim: true
     },
-    content: {
+    picture: {
         type: String,
         default: '',
         trim: true
     },
+    attributes: [{
+        attributeName: String,
+        score: Number,
+        uom: String
+    }],
     user: {
         type: Schema.ObjectId,
         ref: 'User'
@@ -34,8 +39,8 @@ var ArticleSchema = new Schema({
 /**
  * Validations
  */
-ArticleSchema.path('title').validate(function(title) {
-    return title.length;
+ArticleSchema.path('name').validate(function(name) {
+    return name.length;
 }, 'Title cannot be blank');
 
 /**

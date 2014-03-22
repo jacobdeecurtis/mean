@@ -1,21 +1,96 @@
+<!-- This section is for creating a new option -->
+<link rel="stylesheet" type="text/css" href="/css/views/create.css"> 
+ 
+<center>
+	<input  class="searchForm" ng-model="myFilter.name" placeholder="Search for an option" >
+
+	
+</center>
+
+
+	<button  ng-click="isReplyFormOpen = !isReplyFormOpen" class="center-block">If it doesn't already exist, click me to create it!</button>
+
+
+<div ng-show="isReplyFormOpen" id="replyForm"> </div>
+
 <section data-ng-controller="ArticlesController">
-	<form class="form-horizontal col-md-6" role="form" data-ng-submit="create()">
+	<form class="form-horizontal col-md-6" role="form" data-ng-submit="create()" ng-show="isReplyFormOpen"> 
+
+		<!-- Creates text box for user to input name of option.  -->
 		<div class="form-group">
-			<label for="title" class="col-md-2 control-label">Title</label>
+			<label for="name" class="col-md-2 control-label">Name</label>
 			<div class="col-md-10">
-				<input type="text" class="form-control" data-ng-model="title" id="title" placeholder="Title" required>
+				<input type="name" class="form-control" data-ng-model="name" id="name" placeholder="Name" required>
 			</div>
 		</div>
+
+		<!-- Creates text box for user to input picture of option.  -->
 		<div class="form-group">
-			<label for="content" class="col-md-2 control-label">Content</label>
-			<div class="col-md-10">
-				<textarea data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content" class="form-control" required></textarea>
+			<label for="picture" class="col-md-2 control-label">Image</label>
+
+			<span class="caret" ng-click="clickedImagePlus = !clickedImagePlus"></span> 
+
+			<div ng-show="clickedImagePlus" id="replyForm">
+
+			<div class="col-md-5" id="replyForm" ng-show="clickedImagePlus">
+				<input type="url" class="form-control" data-ng-model="picture" id="picture" placeholder="image url" required>
 			</div>
 		</div>
+
+		<!-- Creates text box for user to input attributes of option.  -->
+		<div class="form-group">
+			<label for="title" class="col-md-2 control-label">Attributes</label>
+		
+			<img src="/img/icons/glyphicons_432_plus.png" ng-click="add_attribute()">
+
+			<div ng-repeat="att in attributesArray">
+
+				<div class="row">
+					<!-- attribute Name -->
+					<input type="text" class="col-xs-3" ng-model="att.attributeName" id="title" placeholder="attribute" required>
+
+					<!-- attribute Score -->
+					<div class="col-xs-3">
+						<input type="number" class="form-control" ng-model="att.score"  placeholder= "score" required>
+					</div>
+					<!-- removed id="title" from score and unit of measurement -->
+
+					<!-- attribute unit of measurement-->
+					<div class="form-group">
+						<div class="col-xs-3">
+							<input type="text" class="form-control" ng-model="att.uom" placeholder= "unit of measurement" required>
+						</div>
+					</div>	
+				</div>
+
+			</div> 
+		
+			<!-- Creates the submit button-->
 		<div class="form-group">
 			<div class="col-md-offset-2 col-md-10">
 				<button type="submit" class="btn btn-default">Submit</button>
 			</div>
 		</div>
-	</form>
+	 </form> 
 </section>
+	 
+<!-- This section is for displaying and searching for the attributes --> 
+
+
+<section ng-controller="ArticlesController" ng-init="find()">
+<ul>
+<center>
+    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name">
+      <img class="profile-pic" ng-src='{{article.picture}}'/>
+      </img>
+      <h3>{{article.name}}</h3>
+      Attributes: 
+      <div class="num-friends" ng-repeat= "attribute in article.attributes">
+      		{{attribute.attributeName}}:
+      		{{attribute.score}}
+      		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
+      </div>
+    </li>
+    </center>
+  </ul>
+</section> 
