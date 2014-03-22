@@ -47,7 +47,7 @@ module.exports = function(grunt) {
                     },
                     cwd: __dirname
                 }
-            }
+            },
             prod: {
                 script: 'server.js',
                 options: {
