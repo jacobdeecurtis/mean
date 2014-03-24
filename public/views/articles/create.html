@@ -13,11 +13,11 @@
 
 <div ng-show="isReplyFormOpen" id="replyForm"> </div>
 
-<section data-ng-controller="ArticlesController" class='optionKanyeWest' border= "1px solid #ccc"  bgcolor="#E6E6FA">
+<section data-ng-controller="ArticlesController" class='optionKanyeWest' border= "1px solid #ccc"  bgcolor="#E6E6FA" ng-show="isReplyFormOpen">
 
 
 
-<form class="form-horizontal" ng-submit="create()"  role="form" ng-show="isReplyFormOpen" >
+<form class="form-horizontal" ng-submit="create()"  role="form"  >
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label" bgcolor="#E6E6FA">Name</label>
 			<div class="col-sm-10">
