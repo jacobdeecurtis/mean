@@ -7,6 +7,7 @@
   	<div ng-show="isReplyFormOpen">
   		<center>
   		<h2>What are the options?</h2>
+  		</center>
   		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
 <ul>
@@ -21,7 +22,7 @@
       		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
       </div>
     </li>
-    </center>
+   
   </ul>
 </section> 
   	</div>
