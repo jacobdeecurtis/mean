@@ -6,11 +6,11 @@
   <div ng-show="isReplyFormOpen" id="replyForm"> </div>
   	<div ng-show="isReplyFormOpen">
   		<p>Well, I wonder how this'll look?</p>
-  		<input  class="searchForm" ng-model="myFilter.name" placeholder="Search for an option" >
+  		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
 <ul>
 <center>
-    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name">
+    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name | visible | limitTo: 1">
       <img class="profile-pic" ng-src='{{article.picture}}'/>
       </img>
       <h3>{{article.name}}</h3>
