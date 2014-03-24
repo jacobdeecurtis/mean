@@ -25,6 +25,23 @@
     </li>
    
   </ul>
+
+  <input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
+  		<section ng-controller="ArticlesController" ng-init="find()">
+<ul>
+    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
+      <img class="profile-pic" ng-src='{{article.picture}}'/>
+      </img>
+      <h3>{{article.name}}</h3>
+      Attributes: 
+      <div class="num-friends" ng-repeat= "attribute in article.attributes">
+      		{{attribute.attributeName}}:
+      		{{attribute.score}}
+      		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
+      </div>
+    </li>
+   
+  </ul>
 </section> 
   	</div>
   <li><a href="#">What things influence your decision?</a></li>
