@@ -10,7 +10,7 @@
   		<section ng-controller="ArticlesController" ng-init="find()">
 <ul>
 <center>
-    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name | visible | limitTo: 2">
+    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
       <img class="profile-pic" ng-src='{{article.picture}}'/>
       </img>
       <h3>{{article.name}}</h3>
