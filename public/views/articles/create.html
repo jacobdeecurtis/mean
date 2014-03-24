@@ -17,7 +17,7 @@
 
 
 
-<form class="form-horizontal" class='optionKanyeWest'  role="form" ng-show="isReplyFormOpen">
+<form class="form-horizontal" class='optionKanyeWest'  role="form" border= "1px solid #ccc" ng-show="isReplyFormOpen" >
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">Name</label>
 			<div class="col-sm-10">
@@ -27,7 +27,7 @@
 
   <div class="form-group">
     <label for="picture" class="col-sm-2 control-label">Image</label>
-    <span class="caret" ng-click="clickedImagePlus = !clickedImagePlus"></span> 
+    <span class="caret" style="font-size:100px;" ng-click="clickedImagePlus = !clickedImagePlus"></span> 
     <div ng-show="clickedImagePlus" id="replyForm">
     	<div class="col-sm-10" id="replyForm" ng-show="clickedImagePlus">
 				<input type="url" class="form-control" data-ng-model="picture" id="picture" placeholder="image url" required>
