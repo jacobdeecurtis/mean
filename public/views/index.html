@@ -2,14 +2,14 @@
 <!-- <section data-ng-controller="IndexController"> -->
 <section data-ng-controller="ArticlesController">
 <ul class="nav nav-pills nav-stacked" class="text-center">
-  <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen"><a href="#">What are the options?</a></li>
+  <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen"><a href="#">Options</a></li>
   <div ng-show="isReplyFormOpen" id="replyForm"> </div>
   	<div ng-show="isReplyFormOpen">
-  		<p>Well, I wonder how this'll look?</p>
+  		<center>
+  		<h2>What are the options?</h2>
   		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
 <ul>
-<center>
     <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
       <img class="profile-pic" ng-src='{{article.picture}}'/>
       </img>
