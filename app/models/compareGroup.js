@@ -33,7 +33,7 @@ CompareGroupSchema.path('optionKanye').validate(function(optionKanye) {
 }, 'Title cannot be blank');
 
 /**
- * Statics
+ * Statics. I don't know if I need this crap below. 
  */
 CompareGroupSchema.statics.load = function(id, cb) {
     this.findOne({
