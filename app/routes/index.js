@@ -8,7 +8,7 @@ module.exports = function(app) {
     // app.post('/index',  compareGroups.create);
     // app.get('/index', compareGroups.all);
     
-app.param('compareGroupId', compareGroups.compareGroup);
+// app.param('compareGroupId', compareGroups.compareGroup);
 };
 
 
