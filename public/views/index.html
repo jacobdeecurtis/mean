@@ -29,10 +29,10 @@
 </section>
 </div>
 
-
+<div class = "optionNames">
   <input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
-<ul>
+  <ul>
     <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
       <img class="profile-pic" ng-src='{{article.picture}}'/>
       </img>
@@ -45,10 +45,10 @@
       
     </li>
    
-  </ul>
+   </ul>
 </div>
 </section> 
-  	</div>
+</div>
   <li><a href="#">What things influence your decision?</a></li>
   <li><a href="#">More about those things</a></li>
   <li><a href="#">Scores</a></li>

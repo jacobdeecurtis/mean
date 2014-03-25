@@ -100,6 +100,10 @@ button:hover {
     font-weight: 500;
 }
 
+.optionNames {
+  float: left;
+}
+
 ul{
     list-style-type: none;
 }
