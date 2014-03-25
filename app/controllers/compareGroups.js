@@ -1,43 +1,43 @@
-'use strict';
+// 'use strict';
 
-/**
- * Module dependencies.
- */
-var mongoose = require('mongoose'),
-    CompareGroup = mongoose.model('CompareGroup'),
-    _ = require('lodash');
+// /**
+//  * Module dependencies.
+//  */
+// var mongoose = require('mongoose'),
+//     CompareGroup = mongoose.model('CompareGroup'),
+//     _ = require('lodash');
 
 
-/**
- * Find compareGroup by id
- */
-exports.compareGroup = function(req, res, next, id) {
-    CompareGroup.load(id, function(err, compareGroup) {
-        if (err) return next(err);
-        if (!compareGroup) return next(new Error('Failed to load compareGroup ' + id));
-        req.compareGroup = compareGroup;
-        next();
-    });
-};
+// /**
+//  * Find compareGroup by id
+//  */
+// exports.compareGroup = function(req, res, next, id) {
+//     CompareGroup.load(id, function(err, compareGroup) {
+//         if (err) return next(err);
+//         if (!compareGroup) return next(new Error('Failed to load compareGroup ' + id));
+//         req.compareGroup = compareGroup;
+//         next();
+//     });
+// };
 
-/**
- * Create an compareGroup
- */
-exports.create = function(req, res) {
-    var compareGroup = new CompareGroup(req.body);
-    compareGroup.user = req.user;
+// /**
+//  * Create an compareGroup
+//  */
+// exports.create = function(req, res) {
+//     var compareGroup = new CompareGroup(req.body);
+//     compareGroup.user = req.user;
 
-    compareGroup.save(function(err) {
-        if (err) {
-            return res.send('users/signup', {
-                errors: err.errors,
-                compareGroup: compareGroup
-            });
-        } else {
-            res.jsonp(compareGroup);
-        }
-    });
-};
+//     compareGroup.save(function(err) {
+//         if (err) {
+//             return res.send('users/signup', {
+//                 errors: err.errors,
+//                 compareGroup: compareGroup
+//             });
+//         } else {
+//             res.jsonp(compareGroup);
+//         }
+//     });
+// };
 
 
 
