@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
  * Find compareGroup by id
  */
 exports.compareGroup = function(req, res, next, id) {
-    Article.load(id, function(err, compareGroup) {
+    CompareGroup.load(id, function(err, compareGroup) {
         if (err) return next(err);
         if (!compareGroup) return next(new Error('Failed to load compareGroup ' + id));
         req.compareGroup = compareGroup;
