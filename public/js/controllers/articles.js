@@ -5,9 +5,15 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
 
 var blankOptionName= "blank";
 $scope.optionNames = [blankOptionName]; 
+$scope.add_optionName = function() {
+        var newOptionName = angular.copy(blankOptionName);
+        $scope.optionNames.push(newOptionName);
+    };
 
+
+                //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
-    // $scope.attributes = new Array();
+   
     var blankAttribute = {attributeName: null, score: null, uom: null};
     $scope.attributesArray = [blankAttribute]; 
   
