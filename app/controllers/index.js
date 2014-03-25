@@ -98,14 +98,14 @@ exports.create = function(req, res) {
 /**
  * List of Articles
  */
-// exports.all = function(req, res) {
-//     CompareGroup.find().sort('-created').populate('user', 'name username').exec(function(err, compareGroups) {
-//         if (err) {
-//             res.render('error', {
-//                 status: 500
-//             });
-//         } else {
-//             res.jsonp(compareGroups);
-//         }
-//     });
-// };
+exports.all = function(req, res) {
+    CompareGroup.find().sort('-created').populate('user', 'name username').exec(function(err, compareGroups) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            res.jsonp(compareGroups);
+        }
+    });
+};
