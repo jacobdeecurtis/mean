@@ -7,6 +7,7 @@ var blankOptionName= null;
 $scope.optionNames = [blankOptionName]; 
 $scope.add_optionName = function() {
         var newOptionName = blankOptionName ++;
+        consol.log(newOptionName);
         $scope.optionNames.push(newOptionName);
     };
 
