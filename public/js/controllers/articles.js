@@ -3,14 +3,7 @@
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles', function ($scope, $stateParams, $location, Global, Articles) {
     $scope.global = Global;
 
- var blankOptionName = {attributeName: null, score: null, uom: null};
-    $scope.optionsArray = [blankOptionName]; 
-  
-    $scope.add_OptionName = function() {
-        var newOption = angular.copy(blankOptionName);
-        console.log(newOption);
-        $scope.optionsArray.push(newOption);
-    };
+ 
 
 
                 //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
