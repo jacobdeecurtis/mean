@@ -19,15 +19,21 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
     $scope.create = function() {
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
-            name: this.name,
-            picture: this.picture,
-            attributes: this.attributesArray,
-            score: this.attributesArray.score
+            optionKanye: this.optionKanye,
+            optionName: this.optionKanye.optionName,
+            compareGroupattributes: this.optionKanye.attributes,
+            compareGroupattributeName: this.optionKanye.attributes.attributeName,
+        	compareGroupimportance: this.optionKanye.attributes.importance,
+        	compareGroupscore: this.optionKanye.attributes.score,
+        	compareGroupuom: this.optionKanye.attributes.uom,
         });
 
         compareGroup.$save(function(response) {
             $location.path('index/' + response._id);
         });
+
+
+
 
         // this.name = '';
         // this.image ='';
@@ -37,45 +43,45 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
         
     };
 
- $scope.remove = function(article) {
-        if (article) {
-            article.$remove();
+ // $scope.remove = function(article) {
+ //        if (article) {
+ //            article.$remove();
 
-            for (var i in $scope.articles) {
-                if ($scope.articles[i] === article) {
-                    $scope.articles.splice(i, 1);
-                }
-            }
-        }
-        else {
-            $scope.article.$remove();
-            $location.path('articles');
-        }
-    };
+ //            for (var i in $scope.articles) {
+ //                if ($scope.articles[i] === article) {
+ //                    $scope.articles.splice(i, 1);
+ //                }
+ //            }
+ //        }
+ //        else {
+ //            $scope.article.$remove();
+ //            $location.path('articles');
+ //        }
+ //    };
 
-    $scope.update = function() {
-        var article = $scope.article;
-        if (!article.updated) {
-            article.updated = [];
-        }
-        article.updated.push(new Date().getTime());
+    // $scope.update = function() {
+    //     var article = $scope.article;
+    //     if (!article.updated) {
+    //         article.updated = [];
+    //     }
+    //     article.updated.push(new Date().getTime());
 
-        article.$update(function() {
-            $location.path('articles/' + article._id);
-        });
-    };
+    //     article.$update(function() {
+    //         $location.path('articles/' + article._id);
+    //     });
+    // };
 
     $scope.find = function() {
-        Articles.query(function(articles) {
-            $scope.articles = articles;
+        CompareGroups.query(function(compareGroups) {
+            $scope.compareGroups = compareGroups;
         });
     };
 
     $scope.findOne = function() {
-        Articles.get({
-            articleId: $stateParams.articleId
-        }, function(article) {
-            $scope.article = article;
+        CompareGroups.get({
+            compareGroupId: $stateParams.compareGroupId
+        }, function(compareGroup) {
+            $scope.compareGroup = compareGroup;
         });
     };
     
