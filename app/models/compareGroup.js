@@ -39,10 +39,10 @@ CompareGroupSchema.path('optionKanye').validate(function(optionKanye) {
 /**
  * Statics. I don't know if I need this crap below. 
  */
-// CompareGroupSchema.statics.load = function(id, cb) {
-//     this.findOne({
-//         _id: id
-//     }).populate('user', 'name username').exec(cb);
-// };
+CompareGroupSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    }).populate('user', 'name username').exec(cb);
+};
 
 mongoose.model('CompareGroup', CompareGroupSchema);
