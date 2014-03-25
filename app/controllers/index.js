@@ -22,7 +22,7 @@ exports.render = function(req, res) {
 exports.compareGroup = function(req, res, next, id) {
     CompareGroup.load(id, function(err, compareGroup) {
         if (err) return next(err);
-        if (!article) return next(new Error('Failed to load compareGroup ' + id));
+        if (!compareGroup) return next(new Error('Failed to load compareGroup ' + id));
         req.compareGroup = compareGroup;
         next();
     });
