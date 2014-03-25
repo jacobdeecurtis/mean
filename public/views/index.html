@@ -9,7 +9,7 @@
   <div ng-show="isReplyFormOpen" id="replyForm"> </div>
   	<div ng-show="isReplyFormOpen">
 
-<div float = "left">  		
+		
   		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
 <ul ng-click>
@@ -26,9 +26,9 @@
     </li>
    
   </ul>
-</div>
 
-<div float = "left"> 
+
+
   <input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
 <ul>
@@ -41,7 +41,7 @@
       		{{attribute.attributeName}}:
       		{{attribute.score}}
       		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
-      </div>
+      
     </li>
    
   </ul>
