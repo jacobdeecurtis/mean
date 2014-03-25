@@ -12,7 +12,7 @@
   		
   		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
   		<section ng-controller="ArticlesController" ng-init="find()">
-<ul>
+<ul ng-click>
     <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
       <img class="profile-pic" ng-src='{{article.picture}}'/>
       </img>
