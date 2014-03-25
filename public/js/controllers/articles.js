@@ -20,6 +20,7 @@ $scope.add_optionName = function() {
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
+        console.log(newAttr);
         $scope.attributesArray.push(newAttr);
     };
 
