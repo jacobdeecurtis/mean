@@ -22,7 +22,11 @@ var CompareGroupSchema = new Schema({
         score: Number,
         uom: String
         }]
-    }]
+    }],
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User'
+    }
 });
 
 /**
