@@ -3,12 +3,13 @@
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles', function ($scope, $stateParams, $location, Global, Articles) {
     $scope.global = Global;
 
-var blankOptionName= null;
-$scope.optionNames = [blankOptionName]; 
-$scope.add_optionName = function() {
-        var newOptionName = blankOptionName ++;
-        consol.log(newOptionName);
-        $scope.optionNames.push(newOptionName);
+ var blankOptionName = {attributeName: null, score: null, uom: null};
+    $scope.optionsArray = [blankOptionName]; 
+  
+    $scope.add_OptionName = function() {
+        var newOption = angular.copy(blankOptionName);
+        console.log(newOption);
+        $scope.optionsArray.push(newOption);
     };
 
 
