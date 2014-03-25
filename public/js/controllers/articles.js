@@ -3,12 +3,13 @@
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles', function ($scope, $stateParams, $location, Global, Articles) {
     $scope.global = Global;
 
-
+var blankOptionName= "blank";
+$scope.optionNames = [blankOptionName]; 
 
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
     // $scope.attributes = new Array();
     var blankAttribute = {attributeName: null, score: null, uom: null};
-             $scope.attributesArray = [blankAttribute]; 
+    $scope.attributesArray = [blankAttribute]; 
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
