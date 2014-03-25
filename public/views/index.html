@@ -1,32 +1,33 @@
 <link rel="stylesheet" type="text/css" href="/css/views/create.css"> 
 <!-- <section data-ng-controller="IndexController"> -->
 <section data-ng-controller="ArticlesController">
-<ul class="nav nav-pills nav-stacked" class="text-center">
-  <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen">
-  	<a href="#">What are the options?</a>
-  </li>
-
-  <div ng-show="isReplyFormOpen" id="replyForm"> </div>
-  	<div ng-show="isReplyFormOpen">
-
-		
-  		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
-  		<section ng-controller="ArticlesController" ng-init="find()">
-<ul ng-click>
-    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
-      <img class="profile-pic" ng-src='{{article.picture}}'/>
-      </img>
-      <h3>{{article.name}}</h3>
-      Attributes: 
-      <div class="num-friends" ng-repeat= "attribute in article.attributes">
-      		{{attribute.attributeName}}:
-      		{{attribute.score}}
-      		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
-      </div>
+  <ul class="nav nav-pills nav-stacked" class="text-center">
+    <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen">
+    	<a href="#">What are the options?</a>
     </li>
-   
-  </ul>
 
+    <div ng-show="isReplyFormOpen" id="replyForm"> </div>
+    	<div ng-show="isReplyFormOpen">
+
+<div class = "optionNames">
+    		<input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
+    		<section ng-controller="ArticlesController" ng-init="find()">
+  <ul ng-click>
+      <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
+        <img class="profile-pic" ng-src='{{article.picture}}'/>
+        </img>
+        <h3>{{article.name}}</h3>
+        Attributes: 
+        <div class="num-friends" ng-repeat= "attribute in article.attributes">
+        		{{attribute.attributeName}}:
+        		{{attribute.score}}
+        		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
+        </div>
+      </li>
+     
+    </ul>
+</section>
+</div>
 
 
   <input  class="searchForm" ng-model="myFilter.name" placeholder="option" >
