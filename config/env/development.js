@@ -5,6 +5,8 @@ module.exports = {
     app: {
         name: 'MEAN - A Modern Stack - Development'
     },
+    port: 4004,
+    PORT: 4004,
     facebook: {
         clientID: 'APP_ID',
         clientSecret: 'APP_SECRET',
