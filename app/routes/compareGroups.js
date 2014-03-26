@@ -15,16 +15,16 @@ var hasAuthorization = function(req, res, next) {
 module.exports = function(app) {
     
     // // Home route
-    app.get('/', index.render);
+    app.get('/', compareGroups.render);
 
 
-    app.get('/index', index.all);
-    app.post('/index', authorization.requiresLogin, index.create);
-    // app.get('/index/:compareGroupId', index.show);
-    // app.put('/index/:compareGroupId', authorization.requiresLogin, hasAuthorization, index.update);
-    // app.del('/index/:compareGroupId', authorization.requiresLogin, hasAuthorization, index.destroy);
+    app.get('/compareGroups', compareGroups.all);
+    app.post('/compareGroups', authorization.requiresLogin, compareGroups.create);
+    // app.get('/compareGroups/:compareGroupId', compareGroups.show);
+    // app.put('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.update);
+    // app.del('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.destroy);
 
     // Finish with setting up the articleId param
-    // app.param('compareGroupId', index.compareGroups);
+    // app.param('compareGroupId', compareGroups.compareGroups);
 
 };

@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Article Schema
+ * CompareGroup Schema
  */
 var CompareGroupSchema = new Schema({
     created: {
