@@ -28,10 +28,10 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         url: '/',
         templateUrl: 'views/index.html'
     });
-      .state('compareGroups', {
-        url: '/compareGroups',
-        templateUrl: 'views/compareGroups.html'
-    });
+    //   .state('compareGroups', {
+    //     url: '/compareGroups',
+    //     templateUrl: 'views/compareGroups.html'
+    // });
 }
 ]);
 
