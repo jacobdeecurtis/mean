@@ -5,7 +5,7 @@
  */
 
 var mongoose = require('mongoose'),
-    Article = mongoose.model('CompareGroup'),
+    CompareGroup = mongoose.model('CompareGroup'),
     _ = require('lodash');
 
 
