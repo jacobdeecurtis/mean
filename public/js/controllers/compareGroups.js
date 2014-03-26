@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', 'Global', 'CompareGroups', function ($scope, Global) {
+angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
 
