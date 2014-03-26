@@ -19,13 +19,12 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
     $scope.create = function() {
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
-            optionKanye: this.optionKanye,
-            optionName: this.optionKanye.optionName,
-            compareGroupattributes: this.optionKanye.attributes,
-            compareGroupattributeName: this.optionKanye.attributes.attributeName,
-        	compareGroupimportance: this.optionKanye.attributes.importance,
-        	compareGroupscore: this.optionKanye.attributes.score,
-        	compareGroupuom: this.optionKanye.attributes.uom,
+            optionName: this.optionName,
+            optionAttributes: this.optionName.optionAttributes,
+            attributeName: this.optionAttributes.attributeName,
+            optionImportance: this.optionAttributes.optionImportance,
+             optionScore: this.optionAttributes.optionScore,
+              optionuom: this.optionAttributes.optionuom
         });
 
         compareGroup.$save(function(response) {
