@@ -9,12 +9,12 @@ var mongoose = require('mongoose'),
     _ = require('lodash');
 
 
-exports.render = function(req, res) {
-    console.log("in index!!!");
-    res.render('index', {
-        user: req.user ? JSON.stringify(req.user) : 'null'
-    });
-};
+// exports.render = function(req, res) {
+//     console.log("in index!!!");
+//     res.render('index', {
+//         user: req.user ? JSON.stringify(req.user) : 'null'
+//     });
+// };
 
 
 

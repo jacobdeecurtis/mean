@@ -15,7 +15,7 @@ var hasAuthorization = function(req, res, next) {
 module.exports = function(app) {
     
     // // Home route
-    app.get('/', compareGroups.render);
+    // app.get('/', compareGroups.render);
 
 
     app.get('/compareGroups', compareGroups.all);
