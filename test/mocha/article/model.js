@@ -6,11 +6,13 @@
 var should = require('should'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
-    Article = mongoose.model('Article');
+    Article = mongoose.model('Article'),
+    CompareGroup = mongoose.model('CompareGroup');
 
 //Globals
 var user;
 var article;
+var compareGroup;
 
 //The tests
 describe('<Unit Test>', function() {

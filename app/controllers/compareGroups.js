@@ -22,21 +22,21 @@ var mongoose = require('mongoose'),
 /**
  * Find article by id
  */
-exports.CompareGroup = function(req, res, next, id) {
-    CompareGroup.load(id, function(err, CompareGroup) {
-        if (err) return next(err);
-        if (!CompareGroup) return next(new Error('Failed to load CompareGroup ' + id));
-        req.CompareGroup = CompareGroup;
-        next();
-    });
-};
+// exports.CompareGroup = function(req, res, next, id) {
+//     CompareGroup.load(id, function(err, CompareGroup) {
+//         if (err) return next(err);
+//         if (!CompareGroup) return next(new Error('Failed to load CompareGroup ' + id));
+//         req.CompareGroup = CompareGroup;
+//         next();
+//     });
+// };
 
 /**
  * Create an article
  */
 exports.create = function(req, res) {
     var CompareGroup = new CompareGroup(req.body);
-    compareGroup.user = req.user;
+    // compareGroup.user = req.user;
 
     compareGroup.save(function(err) {
         if (err) {
@@ -98,14 +98,14 @@ exports.create = function(req, res) {
 /**
  * List of Articles
  */
-exports.all = function(req, res) {
-    CompareGroup.find().sort('-created').populate('user', 'name username').exec(function(err, compareGroups) {
-        if (err) {
-            res.render('error', {
-                status: 500
-            });
-        } else {
-            res.jsonp(compareGroups);
-        }
-    });
-};
+// exports.all = function(req, res) {
+//     CompareGroup.find().sort('-created').populate('user', 'name username').exec(function(err, compareGroups) {
+//         if (err) {
+//             res.render('error', {
+//                 status: 500
+//             });
+//         } else {
+//             res.jsonp(compareGroups);
+//         }
+//     });
+// };

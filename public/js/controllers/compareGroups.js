@@ -28,7 +28,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         });
 
         compareGroup.$save(function(response) {
-            $location.path('compareGroups/' + response._id);
+            $location.path('compareGroups/');
         });
 
 
@@ -37,18 +37,18 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
  
 
-    $scope.find = function() {
-        CompareGroups.query(function(compareGroups) {
-            $scope.compareGroups = compareGroups;
-        });
-    };
+    // $scope.find = function() {
+    //     CompareGroups.query(function(compareGroups) {
+    //         $scope.compareGroups = compareGroups;
+    //     });
+    // };
 
-    $scope.findOne = function() {
-        CompareGroups.get({
-            compareGroupId: $stateParams.compareGroupId
-        }, function(compareGroup) {
-            $scope.compareGroup = compareGroup;
-        });
-    };
+    // $scope.findOne = function() {
+    //     CompareGroups.get({
+    //         compareGroupId: $stateParams.compareGroupId
+    //     }, function(compareGroup) {
+    //         $scope.compareGroup = compareGroup;
+    //     });
+    // };
     
 }]);

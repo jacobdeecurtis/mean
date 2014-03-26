@@ -25,27 +25,28 @@ var CompareGroupSchema = new Schema({
         optionImportance: Number,
         optionScore: Number,
         optionuom: String
-    }],
-    user: {
-        type: Schema.ObjectId,
-        ref: 'User'
-    }
+    }]
+    //,
+    // user: {
+    //     type: Schema.ObjectId,
+    //     ref: 'User'
+    // }
 });
 
-/**
- * Validations
- */
-CompareGroupSchema.path('optionName').validate(function(optionName) {
-    return optionName.length;
-}, 'Title cannot be blank');
+// /**
+//  * Validations
+//  */
+// CompareGroupSchema.path('optionName').validate(function(optionName) {
+//     return optionName.length;
+// }, 'Title cannot be blank');
 
 /**
  * Statics
  */
-CompareGroupSchema.statics.load = function(id, cb) {
-    this.findOne({
-        _id: id
-    }).populate('user', 'name username').exec(cb);
-};
+// CompareGroupSchema.statics.load = function(id, cb) {
+//     this.findOne({
+//         _id: id
+//     }).populate('user', 'name username').exec(cb);
+// };
 
 mongoose.model('CompareGroup', CompareGroupSchema);
