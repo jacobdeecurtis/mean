@@ -28,7 +28,7 @@ angular.module('mean.system').controller('CompareGroupsController', ['$scope', '
         });
 
         compareGroup.$save(function(response) {
-            $location.path('index/' + response._id);
+            $location.path('compareGroups/' + response._id);
         });
 
 
