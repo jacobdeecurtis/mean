@@ -6,15 +6,15 @@ angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
 
 
 
-    this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
-    $scope.attributes = new Array();
-    var blankAttribute = {attributeName: null, score: null, uom: null};
-             $scope.attributesArray = [blankAttribute]; 
+    // this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
+    // $scope.attributes = new Array();
+    // var blankAttribute = {attributeName: null, score: null, uom: null};
+    //          $scope.attributesArray = [blankAttribute]; 
   
-    $scope.add_attribute = function() {
-        var newAttr = angular.copy(blankAttribute);
-        $scope.attributesArray.push(newAttr);
-    };
+    // $scope.add_attribute = function() {
+    //     var newAttr = angular.copy(blankAttribute);
+    //     $scope.attributesArray.push(newAttr);
+    // };
 
     $scope.create = function() {
         var compareGroup = new CompareGroups({
