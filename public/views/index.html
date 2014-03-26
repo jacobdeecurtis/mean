@@ -39,85 +39,38 @@
     </li>
 
     <div ng-show="isReplyFormOpen" id="replyForm"> </div>
-    	<div ng-show="isReplyFormOpen">
+    <div ng-show="isReplyFormOpen">
 
-  <div class = "optionNames">
-    		<input  class="searchForm" ng-model="myFilter.name" placeholder="option 1" >
-    		<section ng-controller="ArticlesController" ng-init="find()">
-    <ul ng-click>
-        <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
-          <img class="profile-pic" ng-src='{{article.picture}}'/>
-          </img>
-          <h3>{{article.name}}</h3>
-          Attributes: 
-          <div class="num-friends" ng-repeat= "attribute in article.attributes">
-          		{{attribute.attributeName}}:
-          		{{attribute.score}}
-          		{{attribute.uom}}
-          </div>
-        </li>
-    </ul>
+      <div class = "optionNames">
+        		<input  class="searchForm" ng-model="myFilter.name" placeholder="option 1" >
+        		<section ng-controller="ArticlesController" ng-init="find()">
+                <ul ng-click>
+                    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
+                      <img class="profile-pic" ng-src='{{article.picture}}'/>
+                      </img>
+                      <h3>{{article.name}}</h3>
+                      Attributes: 
+                      <div class="num-friends" ng-repeat= "attribute in article.attributes">
+                      		{{attribute.attributeName}}:
+                      		{{attribute.score}}
+                      		{{attribute.uom}}
+                      </div>
+                    </li>
+                </ul>
+            </section>
+      </div>
   </div>
-</section>
+           
 
 
-<div class = "optionNames">
-  <input  class="searchForm" ng-model="myFilter.name" placeholder="option 2" >
-  		<section ng-controller="ArticlesController" ng-init="find()">
-  <ul>
-    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
-      <img class="profile-pic" ng-src='{{article.picture}}'/>
-      </img>
-      <h3>{{article.name}}</h3>
-      Attributes: 
-      <div class="num-friends" ng-repeat= "attribute in article.attributes">
-      		{{attribute.attributeName}}:
-      		{{attribute.score}}
-      		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
-      
-    </li>
-   
-   </ul>
-</div>
-</section> 
-</div>
+
+
+
   <li><a href="#">What things influence your decision?</a></li>
   <li><a href="#">More about those things</a></li>
   <li><a href="#">Scores</a></li>
    <li><a href="#">Results</a></li>
 </ul>
 
-<!-- <ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
 
-<div class="list-group">
-  <a href="#" class="list-group-item active">
-    Cras justo odio
-  </a>
-  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item">Morbi leo risus</a>
-  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item">Vestibulum at eros</a>
-</div>
-
-<div class="panel panel-primary">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-  </div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div> -->
 	
