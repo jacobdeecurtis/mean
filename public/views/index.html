@@ -31,6 +31,7 @@
 
 
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 <ul class="nav nav-pills nav-stacked" class="text-center">
@@ -38,24 +39,22 @@
    	<a href="#">What are the options?</a>
   </li>
 
-    <div ng-show="isReplyFormOpen" id="replyForm"> </div>
-    <div ng-show="isReplyFormOpen">
+  <div ng-show="isReplyFormOpen" id="replyForm"> </div>
+  <div ng-show="isReplyFormOpen">
 
       <div class = "optionNames">
         		<input  class="searchForm" ng-model="myFilter.name" placeholder="option 1" >
         		<section ng-controller="ArticlesController" ng-init="find()">
                 <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name">
-                    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
                       <img class="profile-pic" ng-src='{{article.picture}}'/>
                       </img>
                       <h3>{{article.name}}</h3>
                       Attributes: 
                       <div class="num-friends" ng-repeat= "attribute in article.attributes">
-                      		{{attribute.attributeName}}:
-                      		{{attribute.score}}
-                      		{{attribute.uom}}
-                      </div>
-                    </li>
+                          {{attribute.attributeName}}:
+                          {{attribute.score}}
+                          {{attribute.uom}}
+                      </div> 
                 </li>
             </section>
       </div>
