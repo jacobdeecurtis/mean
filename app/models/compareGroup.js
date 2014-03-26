@@ -42,7 +42,7 @@ CompareGroupSchema.path('optionName').validate(function(optionName) {
 /**
  * Statics
  */
-CompareGroupchema.statics.load = function(id, cb) {
+CompareGroupSchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
     }).populate('user', 'name username').exec(cb);
