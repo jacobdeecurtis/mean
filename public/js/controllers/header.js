@@ -9,7 +9,10 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     }, {
         'title': 'Enter Data',
         'link': 'articles/create'
-    }];
+    }, {
+        'title': 'Decision Machine',
+        'link': '/compareGroups'
+    }];;
     
     $scope.isCollapsed = false;
 }]);
