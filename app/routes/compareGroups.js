@@ -24,7 +24,7 @@ module.exports = function(app) {
     // app.put('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.update);
     // app.del('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.destroy);
 
-    // Finish with setting up the articleId param
-    // app.param('compareGroupId', compareGroups.compareGroups);
+    Finish with setting up the articleId param
+    app.param('compareGroupId', compareGroups.compareGroups);
 
 };
