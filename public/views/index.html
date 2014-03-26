@@ -33,7 +33,6 @@
 
 
 
-<section data-ng-controller="ArticlesController">
   <ul class="nav nav-pills nav-stacked" class="text-center">
     <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen">
     	<a href="#">What are the options?</a>
@@ -45,21 +44,20 @@
   <div class = "optionNames">
     		<input  class="searchForm" ng-model="myFilter.name" placeholder="option 1" >
     		<section ng-controller="ArticlesController" ng-init="find()">
-  <ul ng-click>
-      <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
-        <img class="profile-pic" ng-src='{{article.picture}}'/>
-        </img>
-        <h3>{{article.name}}</h3>
-        Attributes: 
-        <div class="num-friends" ng-repeat= "attribute in article.attributes">
-        		{{attribute.attributeName}}:
-        		{{attribute.score}}
-        		{{attribute.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
-        </div>
-      </li>
-     
+    <ul ng-click>
+        <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name"> <!-- | visible | limitTo: 2" -->
+          <img class="profile-pic" ng-src='{{article.picture}}'/>
+          </img>
+          <h3>{{article.name}}</h3>
+          Attributes: 
+          <div class="num-friends" ng-repeat= "attribute in article.attributes">
+          		{{attribute.attributeName}}:
+          		{{attribute.score}}
+          		{{attribute.uom}}
+          </div>
+        </li>
     </ul>
-    </div>
+  </div>
 </section>
 
 
@@ -123,4 +121,3 @@
   </div>
 </div> -->
 	
-</section>
