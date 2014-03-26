@@ -21,9 +21,9 @@ module.exports = function(app) {
 
     app.get('/index', compareGroups.all);
     app.post('/index', authorization.requiresLogin, compareGroups.create);
-    app.get('/index/:articleId', compareGroups.show);
-    app.put('/index/:articleId', authorization.requiresLogin, hasAuthorization, compareGroups.update);
-    app.del('/index/:articleId', authorization.requiresLogin, hasAuthorization, compareGroups.destroy);
+    app.get('/index/:compareGroupId', compareGroups.show);
+    app.put('/index/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.update);
+    app.del('/index/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.destroy);
 
     // Finish with setting up the articleId param
     app.param('compareGroupId', compareGroups.compareGroups);
