@@ -15,15 +15,25 @@ var CompareGroupSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    optionsKanye: [{
-        optionName: String,
-        optionScore: [Number]
-    }],
-    optionAttributes: [{
-        attributeName: String,
-        optionImportance: Number,
-        optionuom: String
-    }],
+
+    optionName: String
+    
+    // optionsKanye: [{
+    //     optionName: String,
+    //     optionScore: [Number]
+    // }],
+    // optionAttributes: [{
+    //     attributeName: String,
+    //     optionImportance: Number,
+    //     optionuom: String
+    // }]
+
+
+
+
+
+
+
     
     //,
     // user: {

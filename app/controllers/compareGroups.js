@@ -8,6 +8,22 @@ var mongoose = require('mongoose'),
     CompareGroup = mongoose.model('CompareGroup'),
     _ = require('lodash');
 
+
+/**
+ * List of Articles
+ */
+exports.all = function(req, res) {
+    CompareGroup.find().sort('-created').exec(function(err, compareGroups) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            res.jsonp(compareGroups);
+        }
+    });
+};
+
 /**
  * Create an article
  */
