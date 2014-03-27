@@ -3,6 +3,8 @@
 angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
+    $scope.data = {message: "compareGroups controller is getting through to this view"};
+
     $scope.create = function() {
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
