@@ -16,7 +16,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         });
 
         compareGroup.$save(function(response) {
-            $location.path('/compareGroups');
+            $location.path('compareGroups');
         });
     };
 }]);

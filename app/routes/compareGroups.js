@@ -18,7 +18,7 @@ module.exports = function(app) {
     // app.get('/', compareGroups.render);
 
 
-    // app.get('/compareGroups', compareGroups.all);
+    app.get('/compareGroups', compareGroups.all);
     app.post('/compareGroups', compareGroups.create);
     // app.get('/compareGroups/:compareGroupId', compareGroups.show);
     // app.put('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.update);
