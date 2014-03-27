@@ -7,7 +7,12 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
             optionsKanye: this.optionsKanye,
-            optionAttributes: this.optionAttributes
+                optionName: this.optionsKanye.optionName,
+                optionScore: this.optionsKanye.optionScore,
+            optionAttributes: this.optionAttributes,
+                attributeName: this.optionAttributes.attributeName,
+                optionImportance: this.optionAttributes.optionImportance,
+                optionuom: this.optionAttributes.optionuom
         });
 
         compareGroup.$save(function(response) {
@@ -16,5 +21,3 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     };
 }]);
 
-
- 
