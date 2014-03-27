@@ -9,11 +9,12 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     //     'link': 'articles'
     // }, 
     {
-        'title': 'Enter Data',
-        'link': 'articles/create'
-    }, {
         'title': 'Decision Machine',
         'link': '/compareGroups'
+        
+    }, {
+        'title': 'Enter Data',
+        'link': 'articles/create'
     }];
     
     $scope.isCollapsed = false;
