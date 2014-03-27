@@ -8,8 +8,8 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     $scope.create = function() {
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
-            optionsKanye: this.optionsKanye,
-            //     optionName: this.optionsKanye.optionName,
+            // optionsKanye: this.optionsKanye,
+                optionName: this.optionsKanye.optionName
             //     optionScore: this.optionsKanye.optionScore,
             // optionAttributes: this.optionAttributes,
             //     attributeName: this.optionAttributes.attributeName,
