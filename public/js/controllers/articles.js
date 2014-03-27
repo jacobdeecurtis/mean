@@ -21,9 +21,9 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
     $scope.create = function() {
         var article = new Articles({
             //"this" is the same thing as scope
-            name: this.name,
-            picture: this.picture,
-            attributes: this.attributesArray,
+            name: $scope.name,
+            picture: $scope.picture,
+            attributes: $scope.attributesArray,
             // score: this.attributesArray.score
         });
 
