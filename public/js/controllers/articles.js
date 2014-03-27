@@ -4,7 +4,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
     $scope.global = Global;
 
  
-
+    $scope.data = {message: "controller is getting through to this view"};
 
                 //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
