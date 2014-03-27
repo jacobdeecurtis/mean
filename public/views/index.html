@@ -1,62 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example - example-example34-production</title>
-  
+<link rel="stylesheet" type="text/css" href="/css/views/create.css"> 
+<!-- <section data-ng-controller="IndexController"> -->
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.3/angular.min.js"></script>
-  
+<ul class="nav nav-pills nav-stacked" class="text-center">
+  <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen">
+    <a href="#">What are the options?</a>
+  </li>
 
-  
-</head>
-<!-- <body ng-app=""> -->
-   <script>
-   function Ctrl($scope) {
-     $scope.list = [];
-     $scope.text = 'hello';
-     $scope.submit = function() {
-       if ($scope.text) {
-         $scope.list.push(this.text);
-         $scope.text = '';
-       }
-     };
-   }
- </script>
- <form ng-submit="submit()" ng-controller="Ctrl">
-   Enter text and hit enter:
-   <input type="text" ng-model="text" name="text" />
-   <input type="submit" id="submit" value="Submit" />
-   <pre>list={{list}}</pre>
- </form>
-<!-- </body> -->
-</html>
+  <div ng-show="isReplyFormOpen" id="replyForm"> </div>
+  <div ng-show="isReplyFormOpen">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <link rel="stylesheet" type="text/css" href="/css/views/create.css">  -->
-
-
-
-
-
-<!-- <section ng-controller="CompareGroupsController">
+    <section ng-controller="CompareGroupsController">
   <form class="form-horizontal" ng-submit="create()"  role="form"  >
    <div class="form-group">
       <label for="name" class="col-sm-2 control-label" bgcolor="#E6E6FA">Option Name</label>
@@ -74,76 +27,11 @@
   </div>
   </form>
 
-
+<div bgcolor="#E6E6FA">
   <h3>{{compareGroup.optionName}}</h3>
+</div>
 </section> 
-
- -->
-
-
-
-
-
-
-<!-- <ul class="nav nav-pills nav-stacked" class="text-center">
-  <li class="active" ng-click="isReplyFormOpen = !isReplyFormOpen">
-   	<a href="#">What are the options?</a>
-  </li>
-
-  <div ng-show="isReplyFormOpen" id="replyForm"> </div>
-  <div ng-show="isReplyFormOpen">
-
-      <script>
-          function Ctrl($scope) {
-            $scope.list = [];
-            $scope.text = 'hello';
-            $scope.submit = function() {
-              if ($scope.text) {
-                $scope.list.push(this.text);
-                $scope.text = '';
-                console.log ($scope.text);
-              }
-            };
-          }
-      </script>
-
-        <form ng-submit="submit()" ng-controller="Ctrl">
-          Enter text and hit enter:
-          <input type="text" ng-model="text" name="text" />
-          <input type="submit" id="submit" value="Submit" />
-          <pre>list={{list}}</pre>
-        </form>
-
-
-
-          <form class="form-horizontal" ng-submit="create()"  role="form"  >
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label" bgcolor="#E6E6FA">Name</label>
-              <div class="col-sm-10">
-                <input type="name" class="form-control" data-ng-model="name" id="name" placeholder="Name" required>
-              </div>
-          </div>
-  </div> -->
-<!--       <div class = "optionNames">
-        		<input  class="searchForm" ng-model="myFilter.name" placeholder="option 1" >
-        		<section ng-controller="ArticlesController" ng-init="find()">
-                <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name">
-                      <img class="profile-pic" ng-src='{{article.picture}}'/>
-                      </img>
-                      <h3>{{article.name}}</h3>
-                      Attributes: 
-                      <div class="num-friends" ng-repeat= "attribute in article.attributes">
-                          {{attribute.attributeName}}:
-                          {{attribute.score}}
-                          {{attribute.uom}}
-                      </div> 
-                </li>
-            </section>
-      </div>
-
-
-
-      <div class = "optionNames">
+      <!-- <div class = "optionNames">
             <input  class="searchForm" ng-model="myFilter.name" placeholder="option 1" >
             <section ng-controller="ArticlesController" ng-init="find()">
                 <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name">
@@ -158,19 +46,19 @@
                       </div> 
                 </li>
             </section>
-      </div>
-  </div> -->
+      </div> -->
+  </div>
            
 
 
 
 
 
-<!--   <li><a href="#">What things influence your decision?</a></li>
+  <li><a href="#">What things influence your decision?</a></li>
   <li><a href="#">More about those things</a></li>
   <li><a href="#">Scores</a></li>
    <li><a href="#">Results</a></li>
 </ul>
- -->
 
-	
+
+  

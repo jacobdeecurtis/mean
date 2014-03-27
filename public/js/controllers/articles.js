@@ -24,7 +24,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
             name: this.name,
             picture: this.picture,
             attributes: this.attributesArray,
-            score: this.attributesArray.score
+            // score: this.attributesArray.score
         });
 
         article.$save(function(response) {
