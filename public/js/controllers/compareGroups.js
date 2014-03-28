@@ -22,7 +22,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         $scope.attributes.push(newAttr);
     };
 
-    console.log(attributesArray);
+    console.log(attributes);
 
 
 
