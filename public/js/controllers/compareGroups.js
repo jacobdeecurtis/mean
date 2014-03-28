@@ -27,7 +27,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     $scope.contacts = [
       {type:'phone', value:'408 555 1212'},
       {type:'email', value:'john.smith@example.org'} ];
- 
+ console.log(  $scope.name );
  
     $scope.addContact = function() {
      this.contacts.push({type:'email', value:'yourname@example.org'});
