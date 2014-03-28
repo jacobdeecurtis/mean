@@ -15,7 +15,7 @@ var compareGroups = require('../controllers/compareGroups');
 module.exports = function(app) {
     
     // Home route
-    // app.get('/', compareGroups.render);
+    app.get('/', compareGroups.render);
 
 
     app.get('/compareGroups', compareGroups.all);
