@@ -29,9 +29,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
       {type: 'email', value: 'john.smith@example.org'} ];
     };
  
-  SettingsController1.prototype.greet = function() {
-    alert(this.name);
-  };
+ 
  
   SettingsController1.prototype.addContact = function() {
     this.contacts.push({type: 'email', value: 'yourname@example.org'});
