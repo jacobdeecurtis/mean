@@ -23,27 +23,27 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
     
   
-    this.name = "John Smith";
-    this.contacts = [
-      {type: 'phone', value: '408 555 1212'},
-      {type: 'email', value: 'john.smith@example.org'} ];
+ //    this.name = "John Smith";
+ //    this.contacts = [
+ //      {type: 'phone', value: '408 555 1212'},
+ //      {type: 'email', value: 'john.smith@example.org'} ];
     
  
  
  
-  $scope.prototype.addContact = function() {
-    this.contacts.push({type: 'email', value: 'yourname@example.org'});
-  };
+ //  $scope.prototype.addContact = function() {
+ //    this.contacts.push({type: 'email', value: 'yourname@example.org'});
+ //  };
  
- $scope.prototype.removeContact = function(contactToRemove) {
-   var index = this.contacts.indexOf(contactToRemove);
-    this.contacts.splice(index, 1);
-  };
+ // $scope.prototype.removeContact = function(contactToRemove) {
+ //   var index = this.contacts.indexOf(contactToRemove);
+ //    this.contacts.splice(index, 1);
+ //  };
  
- $scope.prototype.clearContact = function(contact) {
-    contact.type = 'phone';
-    contact.value = '';
-  };
+ // $scope.prototype.clearContact = function(contact) {
+ //    contact.type = 'phone';
+ //    contact.value = '';
+ //  };
 
 
 
