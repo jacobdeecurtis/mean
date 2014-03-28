@@ -10,7 +10,7 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     // }, 
     {
         'title': 'Decision Machine',
-        'link': '!#/compareGroups'
+        'link': '/!#/compareGroups'
         
     }, {
         'title': 'Enter Data',
