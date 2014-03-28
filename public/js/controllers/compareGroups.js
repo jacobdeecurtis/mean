@@ -22,25 +22,25 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     // };
 
     
-  function SettingsController1() {
+  
     this.name = "John Smith";
     this.contacts = [
       {type: 'phone', value: '408 555 1212'},
       {type: 'email', value: 'john.smith@example.org'} ];
-    };
+    
  
  
  
-  SettingsController1.prototype.addContact = function() {
+  $scope.prototype.addContact = function() {
     this.contacts.push({type: 'email', value: 'yourname@example.org'});
   };
  
-  SettingsController1.prototype.removeContact = function(contactToRemove) {
+ $scope.prototype.removeContact = function(contactToRemove) {
    var index = this.contacts.indexOf(contactToRemove);
     this.contacts.splice(index, 1);
   };
  
-  SettingsController1.prototype.clearContact = function(contact) {
+ $scope.prototype.clearContact = function(contact) {
     contact.type = 'phone';
     contact.value = '';
   };
@@ -73,7 +73,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         });
 
         compareGroup.$save(function(response) {
-            $location.path('compareGroups');
+            $location.path('!#/compareGroups');
         });
     };
 }]);
