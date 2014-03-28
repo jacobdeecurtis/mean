@@ -3,8 +3,7 @@
 angular.module('mean.articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Global', 'Articles', function ($scope, $stateParams, $location, Global, Articles) {
     $scope.global = Global;
 
- 
-    $scope.data = {message: "controller is getting through to this view"};
+
 
                 //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
@@ -14,7 +13,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
-        console.log(newAttr);
+   
         $scope.attributesArray.push(newAttr);
     };
 

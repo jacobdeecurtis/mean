@@ -3,7 +3,20 @@
 angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
-    $scope.data = {message: "compareGroups controller is getting through to this view"};
+    // $scope.data = {message: "compareGroups controller is getting through to this view"};
+    // $scope.optionName = [blankAttribute];
+    // $scope.optionNames = [];
+    // $scope.option1 = 
+
+    // var blankAttribute = {attributeName: null, score: null, uom: null};
+    // $scope.attributesArray = [blankAttribute]; 
+  
+    // $scope.add_optionstoOptionArray = function() {
+    //     var newAttr = angular.copy(blankAttribute);
+   
+    //     $scope.attributesArray.push(newAttr);
+    //     return 
+    // };
 
     $scope.create = function() {
         var compareGroup = new CompareGroups({
