@@ -3,7 +3,7 @@
 angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
-    $scope.optionNames = [];
+    $scope.optionNames = ["McDonalds"];
 
 
      $scope.data = {message: "compareGroups controller is getting through to this view"};
