@@ -14,19 +14,19 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
    
     var blankAttribute = 'test';
-    $scope.attributesArray = [blankAttribute]; 
+    $scope.attributes= [blankAttribute]; 
 
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
-        $scope.attributesArray.push(newAttr);
+        $scope.attributes.push(newAttr);
     };
 
     console.log(attributesArray);
 
 
 
-    
+
   
  //    $scope.name = "John Smith";
  //    $scope.contacts = [
