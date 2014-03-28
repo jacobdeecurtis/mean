@@ -32,6 +32,7 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         url: '/compareGroups',
         templateUrl: 'views/compareGroups.html'
     });
+}
 ]);
 
 //Setting HTML5 Location Mode
