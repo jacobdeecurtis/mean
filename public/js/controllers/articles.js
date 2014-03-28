@@ -13,7 +13,6 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
-   
         $scope.attributesArray.push(newAttr);
     };
 

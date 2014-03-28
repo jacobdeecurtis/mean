@@ -1,7 +1,29 @@
 <link rel="stylesheet" type="text/css" href="/css/views/create.css"> 
-<!-- <section data-ng-controller="IndexController"> -->
 
-   <div id="ctrl-as-exmpl" ng-controller="CompareGroupsController">
+
+<div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Option Names</label>
+
+    <img src="/img/icons/glyphicons_432_plus.png" ng-click="add_attribute()">
+    
+    <div ng-repeat="att in attributesArray">
+      <div class="row">
+        <input type="text" class="col-xs-3" ng-model="att.attributeName" id="title" placeholder="attribute" required>  
+
+        <div class="col-xs-3">
+          <input type="text" class="form-control" ng-model="att.score"  placeholder= "score" required>
+        </div>  
+          
+        <div class="form-group">
+          <div class="col-xs-3">
+              <input type="text" class="form-control" ng-model="att.uom" placeholder= "unit of measurement" required>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+
+  <!--  <div id="ctrl-as-exmpl" ng-controller="CompareGroupsController">
   Name: <input type="text" ng-model="name"/>
   
   Contact:
@@ -17,7 +39,7 @@
     </li>
     <li>[ <a href="" ng-click="addContact()">add</a> ]</li>
  </ul>
-</div>
+</div> -->
 
 
 <!-- 

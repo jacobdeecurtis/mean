@@ -3,23 +3,23 @@
 angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
+    //Below is for testing
+
     $scope.optionNames = ["data.note"];
 
 
      $scope.data = {message: "compareGroups controller is getting through to this view"};
-    // $scope.optionName = [blankAttribute];
-    // $scope.optionNames = [];
-    // $scope.option1 = 
-
-    // var blankAttribute = {attributeName: null, score: null, uom: null};
-    // $scope.attributesArray = [blankAttribute]; 
-  
-    // $scope.add_optionstoOptionArray = function() {
-    //     var newAttr = angular.copy(blankAttribute);
+    
+    //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
+    //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
    
-    //     $scope.attributesArray.push(newAttr);
-    //     return 
-    // };
+    var blankAttribute = 'null';
+    $scope.attributesArray = [blankAttribute]; 
+  
+    $scope.add_attribute = function() {
+        var newAttr = angular.copy(blankAttribute);
+        $scope.attributesArray.push(newAttr);
+    };
 
     
   
