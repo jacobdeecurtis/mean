@@ -44,7 +44,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     };
   
 
-
+ console.log(  $scope.contacts);
 
 
 
