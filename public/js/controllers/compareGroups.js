@@ -3,6 +3,9 @@
 angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
+    $scope.optionNames = [];
+
+
      $scope.data = {message: "compareGroups controller is getting through to this view"};
     // $scope.optionName = [blankAttribute];
     // $scope.optionNames = [];
@@ -22,7 +25,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
             // optionsKanye: this.optionsKanye,
-                optionName: this.optionsKanye.optionName
+                optionName: this.optionName
             //     optionScore: this.optionsKanye.optionScore,
             // optionAttributes: this.optionAttributes,
             //     attributeName: this.optionAttributes.attributeName,
