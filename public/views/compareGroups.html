@@ -7,19 +7,9 @@
     <img src="/img/icons/glyphicons_432_plus.png" ng-click="add_attribute()">
     
     <div ng-repeat="att in attributesArray">
-      <div class="row">
-        <input type="text" class="col-xs-3" ng-model="att.attributeName" id="title" placeholder="attribute" required>  
+      
+        <input type="text" class="col-xs-3" ng-model="att.attributeName" id="title" placeholder="Option" required>  
 
-        <div class="col-xs-3">
-          <input type="text" class="form-control" ng-model="att.score"  placeholder= "score" required>
-        </div>  
-          
-        <div class="form-group">
-          <div class="col-xs-3">
-              <input type="text" class="form-control" ng-model="att.uom" placeholder= "unit of measurement" required>
-          </div>
-        </div>  
-      </div>
     </div>
 
 
