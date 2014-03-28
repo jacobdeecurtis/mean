@@ -5,10 +5,10 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
     //Below is for testing
 
-    $scope.optionNames = ["data.note"];
+    // $scope.optionNames = ["data.note"];
 
 
-     $scope.data = {message: "compareGroups controller is getting through to this view"};
+    //  $scope.data = {message: "compareGroups controller is getting through to this view"};
     
     //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
@@ -28,28 +28,28 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
     
   
-    $scope.name = "John Smith";
-    $scope.contacts = [
-      {type:'phone', value:'408 555 1212'},
-      {type:'email', value:'john.smith@example.org'} ];
- console.log(  $scope.name );
+ //    $scope.name = "John Smith";
+ //    $scope.contacts = [
+ //      {type:'phone', value:'408 555 1212'},
+ //      {type:'email', value:'john.smith@example.org'} ];
+ // console.log(  $scope.name );
  
-    $scope.addContact = function() {
-     this.contacts.push({type:'email', value:'yourname@example.org'});
-    };
+ //    $scope.addContact = function() {
+ //     this.contacts.push({type:'email', value:'yourname@example.org'});
+ //    };
  
-    $scope.removeContact = function(contactToRemove) {
-     var index = this.contacts.indexOf(contactToRemove);
-     this.contacts.splice(index, 1);
-    };
+ //    $scope.removeContact = function(contactToRemove) {
+ //     var index = this.contacts.indexOf(contactToRemove);
+ //     this.contacts.splice(index, 1);
+ //    };
  
-    $scope.clearContact = function(contact) {
-     contact.type = 'phone';
-     contact.value = '';
-    };
+ //    $scope.clearContact = function(contact) {
+ //     contact.type = 'phone';
+ //     contact.value = '';
+ //    };
   
 
- console.log(  $scope.contacts);
+ // console.log(  $scope.contacts);
 
 
 
