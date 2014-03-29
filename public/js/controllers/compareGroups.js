@@ -72,7 +72,7 @@ var blankAttribute = 'test';
 
 
 
-
+console.log('test');
 
     $scope.create = function() {
         console.log("In controller");
@@ -88,7 +88,8 @@ var blankAttribute = 'test';
         });
 
         compareGroup.$save(function(response) {
-            $location.path('compareGroups');
+            // $location.path('compareGroups/');
+            alert('saved');
         });
     };
 }]);
