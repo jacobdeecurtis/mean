@@ -75,6 +75,7 @@ var blankAttribute = 'test';
 
 
     $scope.create = function() {
+        console.log("In controller");
         var compareGroup = new CompareGroups({
             //"this" is the same thing as scope
             // optionsKanye: this.optionsKanye,
