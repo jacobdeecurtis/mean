@@ -5,33 +5,33 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
     //Below is for testing
 
-     $scope.optionNames = [];
-    // Add a Item to the list
+//      $scope.optionNames = [];
+//     // Add a Item to the list
 
-$scope.addItem = function () {
+// $scope.addItem = function () {
 
-    $scope.optionNames.push($scope.optionName);
-    console.log(optionName);
+//     $scope.optionNames.push($scope.optionName);
+//     console.log(optionName);
 
-    // Clear input fields after push
-    $scope.optionName = "";
+//     // Clear input fields after push
+//     $scope.optionName = "";
 
-};
-
-
+// };
 
 
 
 
-var blankAttribute = 'test';
-    // console.log(blankAttribute);
-    $scope.attributes= [blankAttribute]; 
+
+
+// var blankAttribute = 'test';
+//     // console.log(blankAttribute);
+//     $scope.attributes= [blankAttribute]; 
 
   
-    $scope.add_attribute = function() {
-        var newAttr = angular.copy(blankAttribute);
-        $scope.attributes.push(newAttr);
-    };
+//     $scope.add_attribute = function() {
+//         var newAttr = angular.copy(blankAttribute);
+//         $scope.attributes.push(newAttr);
+//     };
 
     // console.log(attributes);
 
@@ -86,7 +86,7 @@ console.log('test');
             //     optionImportance: this.optionAttributes.optionImportance,
             //     optionuom: this.optionAttributes.optionuom
         });
-
+            console.log(optionName);
         compareGroup.$save(function(response) {
             $location.path('compareGroups/' + response._id);
             alert('saved');
