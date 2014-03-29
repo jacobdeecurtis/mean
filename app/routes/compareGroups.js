@@ -19,7 +19,7 @@ module.exports = function(app) {
 
 
     app.get('/compareGroups', compareGroups.all);
-    app.post('/compareGroups', compareGroups.create);
+    app.post('/compareGroups', authorization.requiresLogin, compareGroups.create);
     // app.get('/compareGroups/:compareGroupId', compareGroups.show);
     // app.put('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.update);
     // app.del('/compareGroups/:compareGroupId', authorization.requiresLogin, hasAuthorization, compareGroups.destroy);

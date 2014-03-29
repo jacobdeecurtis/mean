@@ -77,7 +77,7 @@ console.log('test');
     $scope.create = function() {
         console.log("In controller");
         var compareGroup = new CompareGroups({
-            //"this" is the same thing as scope
+         
             // optionsKanye: this.optionsKanye,
                 optionName: this.optionName
             //     optionScore: this.optionsKanye.optionScore,
@@ -88,7 +88,7 @@ console.log('test');
         });
 
         compareGroup.$save(function(response) {
-            // $location.path('compareGroups/');
+            $location.path('compareGroups/' + response._id);
             alert('saved');
         });
     };

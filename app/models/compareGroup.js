@@ -16,7 +16,11 @@ var CompareGroupSchema = new Schema({
         default: Date.now
     },
 
-    optionName: String
+    optionName: String,
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User'
+    }
     
     // optionsKanye: [{
     //     optionName: String,
