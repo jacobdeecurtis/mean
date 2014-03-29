@@ -91,7 +91,7 @@ console.log('test');
               $location.path('articles/' + response._id);
             // $location.path('compareGroups/' + response._id);
             alert('saved');
-            console.log('saved')''
+            // console.log('saved')''
         });
     };
 }]);
