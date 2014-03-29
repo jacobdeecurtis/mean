@@ -6,7 +6,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     //Below is for testing
 
      $scope.optionNames = ['McDonalds', 'Burger King'];
-     consol.log(optionNames);
+     // consol.log(optionNames);
 
     //  $scope.data = {message: "compareGroups controller is getting through to this view"};
     
@@ -22,7 +22,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
         $scope.attributes.push(newAttr);
     };
 
-    console.log(attributes);
+    // console.log(attributes);
 
 
 
