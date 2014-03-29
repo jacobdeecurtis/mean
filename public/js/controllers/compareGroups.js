@@ -11,6 +11,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 $scope.addItem = function () {
 
     $scope.optionNames.push($scope.optionName);
+    console.log(optionName);
 
     // Clear input fields after push
     $scope.optionName = "";
