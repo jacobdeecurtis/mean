@@ -5,18 +5,27 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
     //Below is for testing
 
-     $scope.optionNames = ['McDonalds', 'Burger King'];
-      // alert(optionNames);
+     $scope.optionNames = [];
+    // Add a Item to the list
 
-    //  $scope.data = {message: "compareGroups controller is getting through to this view"};
-    
-    //Below is for articles stuff. Above is for compareGroup stuff. I would separate them but I can't figure out how : (
-    //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
-   
-    var blankAttribute = 'test';
+$scope.addItem = function () {
+
+    $scope.optionNames.push($scope.optionName);
+
+    // Clear input fields after push
+    $scope.optionName = "";
+
+};
+
+
+
+
+
+
+var blankAttribute = 'test';
     // console.log(blankAttribute);
     $scope.attributes= [blankAttribute]; 
-    console.log(attributes[0])
+
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
