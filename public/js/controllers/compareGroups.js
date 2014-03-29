@@ -86,10 +86,12 @@ console.log('test');
             //     optionImportance: this.optionAttributes.optionImportance,
             //     optionuom: this.optionAttributes.optionuom
         });
-            
+
         compareGroup.$save(function(response) {
-            $location.path('compareGroups/' + response._id);
+              $location.path('articles/' + response._id);
+            // $location.path('compareGroups/' + response._id);
             alert('saved');
+            console.log('saved')''
         });
     };
 }]);
