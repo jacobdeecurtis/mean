@@ -86,7 +86,7 @@ console.log('test');
             //     optionImportance: this.optionAttributes.optionImportance,
             //     optionuom: this.optionAttributes.optionuom
         });
-            console.log(optionName);
+            
         compareGroup.$save(function(response) {
             $location.path('compareGroups/' + response._id);
             alert('saved');
