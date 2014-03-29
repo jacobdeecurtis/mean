@@ -6,7 +6,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     //Below is for testing
 
      $scope.optionNames = ['McDonalds', 'Burger King'];
-      alert(optionNames);
+      // alert(optionNames);
 
     //  $scope.data = {message: "compareGroups controller is getting through to this view"};
     
@@ -14,6 +14,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
    
     var blankAttribute = 'test';
+    console.log(blankAttribute);
     $scope.attributes= [blankAttribute]; 
 
   
