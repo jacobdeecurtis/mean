@@ -76,7 +76,7 @@ console.log('test');
 
     $scope.create = function() {
         console.log("In controller");
-        var compareGroup = new CompareGroups({
+        var compareGroup = new CompareGroup({
          
             // optionsKanye: this.optionsKanye,
                 optionName: this.optionName
