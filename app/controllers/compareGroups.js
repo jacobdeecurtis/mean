@@ -13,6 +13,7 @@ var mongoose = require('mongoose'),
  * List of Articles
  */
 exports.all = function(req, res) {
+    console.log("happening");
     CompareGroup.find().sort('-created').exec(function(err, compareGroups) {
         if (err) {
             res.render('error', {
