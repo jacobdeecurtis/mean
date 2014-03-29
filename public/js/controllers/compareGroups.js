@@ -14,9 +14,9 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
     //this creates array allowing multiple attributes to be created using ng-click and ng-repeat on create.html
    
     var blankAttribute = 'test';
-    console.log(blankAttribute);
+    // console.log(blankAttribute);
     $scope.attributes= [blankAttribute]; 
-
+    console.log(attributes[0])
   
     $scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
