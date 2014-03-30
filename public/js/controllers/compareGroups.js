@@ -89,8 +89,8 @@ console.log('test');
 
         compareGroup.$save(function(response) {
               // $location.path('articles/' + response._id);
-            // $location.path('compareGroups/' + response._id);
-            alert('saved');
+            $location.path('compareGroups/' + response._id);
+           
             console.log('saved');
         });
     };
