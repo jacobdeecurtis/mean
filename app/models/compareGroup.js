@@ -21,7 +21,11 @@ var CompareGroupSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User'
     }
-    
+
+    // created: {
+    //     type: Date,
+    //     default: Date.now
+    // },
     // optionsKanye: [{
     //     optionName: String,
     //     optionScore: [Number]
@@ -30,28 +34,20 @@ var CompareGroupSchema = new Schema({
     //     attributeName: String,
     //     optionImportance: Number,
     //     optionuom: String
-    // }]
-
-
-
-
-
-
-
-    
-    //,
-    // user: {
+    // }],
+    //  user: {
     //     type: Schema.ObjectId,
     //     ref: 'User'
     // }
+
 });
 
-// /**
-//  * Validations
-//  */
-// CompareGroupSchema.path('optionName').validate(function(optionName) {
-//     return optionName.length;
-// }, 'Title cannot be blank');
+/**
+ * Validations
+ */
+CompareGroupSchema.path('optionName').validate(function(optionName) {
+    return optionName.length;
+}, 'Title cannot be blank');
 
 /**
  * Statics
