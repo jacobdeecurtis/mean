@@ -13,7 +13,6 @@ var mongoose = require('mongoose'),
  * List of Articles
  */
 exports.all = function(req, res) {
-    console.log("happening");
     CompareGroup.find().sort('-created').exec(function(err, compareGroups) {
         if (err) {
             res.render('error', {
@@ -29,7 +28,10 @@ exports.all = function(req, res) {
  * Create an article
  */
 exports.create = function(req, res) {
-    var CompareGroup = new CompareGroup(req.body);
+   
+   
+    console.log("sdfasdf");
+        var CompareGroup = new CompareGroup(req.body);
     // compareGroup.user = req.user;
 
     compareGroup.save(function(err) {
