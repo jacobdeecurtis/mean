@@ -8,11 +8,11 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     //     'title': 'Articles',
     //     'link': 'articles'
     // }, 
-    {
-        'title': 'Decision Machine',
-        'link': '/!#/compareGroups'
+    // {
+    //     'title': 'Decision Machine',
+    //     'link': '/!#/compareGroups'
         
-    }, {
+    // }, {
         'title': 'Enter Data',
         'link': 'articles/create'
     }];
