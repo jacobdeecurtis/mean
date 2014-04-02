@@ -26,7 +26,7 @@ exports.compareGroup = function(req, res, next, id) {
  */
 exports.create = function(req, res) {
     console.log("sdfasdf");
-        var CompareGroup = new CompareGroup(req.body);
+        var compareGroup = new CompareGroup(req.body);
      compareGroup.user = req.user;
 
     compareGroup.save(function(err) {
