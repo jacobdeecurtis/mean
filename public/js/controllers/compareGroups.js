@@ -74,8 +74,8 @@ var blankAttribute = {attributeName: null, score: null, uom: null};
 $scope.create = function() {
         var compareGroup = new CompareGroups({
              optionsKanye: this.optionsKanye,
-             optionName: this.optionName
-           optionScore: this.optionScore,
+             optionName: this.optionName,
+           optionScore: this.optionsKanye.optionScore,
             optionAttributes: this.optionAttributes,
            attributeName: this.optionAttributes.attributeName,
            optionImportance: this.optionAttributes.optionImportance,
