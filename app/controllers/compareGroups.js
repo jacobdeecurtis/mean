@@ -37,6 +37,7 @@ exports.create = function(req, res) {
             });
         } else {
             res.jsonp(compareGroup);
+            console.log("saved");
         }
     });
 };
