@@ -16,68 +16,29 @@ var CompareGroupSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    name: {
-        type: String,
-        default: '',
-        trim: true
-    },
-    picture: {
-        type: String,
-        default: '',
-        trim: true
-    },
-    attributes: [{
-        attributeName: String,
-        score: Number,
-        uom: String
+    optionsKanye: [{
+        optionName: String,
+        optionScore: [Number]
     }],
-    user: {
+    optionAttributes: [{
+        attributeName: String,
+        optionImportance: Number,
+        optionuom: String
+    }],
+      user: {
         type: Schema.ObjectId,
         ref: 'User'
     }
 });
 
 
-    // created: {
-    //     type: Date,
-    //     default: Date.now
-    // },
+  
 
-    // optionName: String,
-    // user: {
-    //     type: Schema.ObjectId,
-    //     ref: 'User'
-    // }
-
-    // created: {
-    //     type: Date,
-    //     default: Date.now
-    // },
-    // optionsKanye: [{
-    //     optionName: String,
-    //     optionScore: [Number]
-    // }],
-    // optionAttributes: [{
-    //     attributeName: String,
-    //     optionImportance: Number,
-    //     optionuom: String
-    // }],
-    //  user: {
-    //     type: Schema.ObjectId,
-    //     ref: 'User'
-    // }
-
-//});
-
-
-// CompareGroupSchema.path('optionName').validate(function(optionName) {
-//     return optionName.length;
-// }, 'Title cannot be blank');
 /**
  * Validations
  */
-CompareGroupSchema.path('name').validate(function(name) {
-    return name.length;
+CompareGroupSchema.path('optionName').validate(function(optionName) {
+    return optionName.length;
 }, 'Title cannot be blank');
 
 /**

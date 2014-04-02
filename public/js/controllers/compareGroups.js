@@ -73,11 +73,13 @@ var blankAttribute = {attributeName: null, score: null, uom: null};
 
 $scope.create = function() {
         var compareGroup = new CompareGroups({
-            //"this" is the same thing as scope
-            name: $scope.name,
-            picture: $scope.picture,
-            attributes: $scope.attributesArray,
-            // score: this.attributesArray.score
+             optionsKanye: this.optionsKanye,
+             optionName: this.optionName
+           optionScore: this.optionsKanye.optionScore,
+            optionAttributes: this.optionAttributes,
+           attributeName: this.optionAttributes.attributeName,
+           optionImportance: this.optionAttributes.optionImportance,
+            optionuom: this.optionAttributes.optionuom
         });
 
         compareGroup.$save(function(response) {
