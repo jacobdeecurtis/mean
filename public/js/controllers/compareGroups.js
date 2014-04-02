@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroup', function ($scope, $stateParams, $location, Global, CompareGroups) {
+angular.module('mean.compareGroups').controller('CompareGroupsController', ['$scope', '$stateParams', '$location', 'Global', 'CompareGroups', function ($scope, $stateParams, $location, Global, CompareGroups) {
     $scope.global = Global;
 
     //Below is for testing
@@ -65,7 +65,20 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
 
 
+$scope.create = function() {
+        var compareGroup = new CompareGroups({
+            //"this" is the same thing as scope
+            name: $scope.name,
+            picture: $scope.picture,
+            attributes: $scope.attributesArray,
+            // score: this.attributesArray.score
+        });
 
+        article.$save(function(response) {
+            $location.path('compareGroups/' + response._id);
+        });
+        
+    };
 
 
 
@@ -74,30 +87,73 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
 console.log('test');
 
-    $scope.create = function() {
-        console.log("In controller");
-        var compareGroup = new CompareGroups({
+//     $scope.create = function() {
+//         console.log("In controller");
+//         var compareGroup = new CompareGroups({
          
-            // optionsKanye: this.optionsKanye,
-                optionName: this.optionName
-            //     optionScore: this.optionsKanye.optionScore,
-            // optionAttributes: this.optionAttributes,
-            //     attributeName: this.optionAttributes.attributeName,
-            //     optionImportance: this.optionAttributes.optionImportance,
-            //     optionuom: this.optionAttributes.optionuom
-        });
+//             // optionsKanye: this.optionsKanye,
+//                 optionName: this.optionName
+//             //     optionScore: this.optionsKanye.optionScore,
+//             // optionAttributes: this.optionAttributes,
+//             //     attributeName: this.optionAttributes.attributeName,
+//             //     optionImportance: this.optionAttributes.optionImportance,
+//             //     optionuom: this.optionAttributes.optionuom
+//         });
 
-        compareGroup.$save(function(response) {
-              // $location.path('articles/' + response._id);
-            $location.path('compareGroups/' + response._id);
+//         compareGroup.$save(function(response) {
+//               // $location.path('articles/' + response._id);
+//             $location.path('compareGroups/' + response._id);
            
-            console.log('saved');
-        });
-    };
-}]);
+//             console.log('saved');
+//         });
+//     };
+// }]);
 
  // $scope.find = function() {
  //        CompareGroups.query(function(compareGroups) {
  //            $scope.compareGroups = compareGroups;
  //        });
  //    };
+
+ $scope.remove = function(compareGroup) {
+        if (compareGroup) {
+            compareGroup.$remove();
+
+            for (var i in $scope.compareGroups) {
+                if ($scope.compareGroups[i] === compareGroup) {
+                    $scope.compareGroups.splice(i, 1);
+                }
+            }
+        }
+        else {
+            $scope.compareGroup.$remove();
+            $location.path('compareGroups');
+        }
+    };
+
+    $scope.update = function() {
+        var compareGroup = $scope.compareGroup;
+        if (!compareGroup.updated) {
+            compareGroup.updated = [];
+        }
+        compareGroup.updated.push(new Date().getTime());
+
+        compareGroup.$update(function() {
+            $location.path('compareGroups/' + compareGroup._id);
+        });
+    };
+
+    $scope.find = function() {
+        CompareGroups.query(function(compareGroups) {
+            $scope.compareGroups = compareGroups;
+        });
+    };
+
+    $scope.findOne = function() {
+        CompareGroups.get({
+            compareGroupId: $stateParams.compareGroupId
+        }, function(compareGroup) {
+            $scope.compareGroup = compareGroup;
+        });
+    };
+}]);
