@@ -79,10 +79,10 @@
 <section ng-controller="CompareGroupsController" ng-init="find()">
 <ul>
 <center>
-    <li class='optionKanyeWest' ng-repeat= "article in articles | filter:myFilter.name">
-      <img class="profile-pic" ng-src='{{article.picture}}'/>
+    <li class='optionKanyeWest' ng-repeat= "compareGroup in compareGroups | filter:myFilter.name">
+      <img class="profile-pic" ng-src='{{compareGroup.picture}}'/>
       </img>
-      <h3>{{article.name}}</h3>
+      <h3>{{compareGroup.name}}</h3>
       Attributes: 
       <div class="num-friends" ng-repeat= "attribute in article.attributes">
           {{attribute.attributeName}}:
