@@ -75,7 +75,7 @@ $scope.create = function() {
         var compareGroup = new CompareGroups({
              optionsKanye: this.optionsKanye,
              optionName: this.optionName
-           optionScore: this.optionsKanye.optionScore,
+           optionScore: this.optionScore,
             optionAttributes: this.optionAttributes,
            attributeName: this.optionAttributes.attributeName,
            optionImportance: this.optionAttributes.optionImportance,
