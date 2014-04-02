@@ -37,9 +37,9 @@ var CompareGroupSchema = new Schema({
 /**
  * Validations
  */
-CompareGroupSchema.path('optionName').validate(function(optionName) {
-    return optionName.length;
-}, 'Title cannot be blank');
+// CompareGroupSchema.path('optionName').validate(function(optionName) {
+//     return optionName.length;
+// }, 'Title cannot be blank');
 
 /**
  * Statics
