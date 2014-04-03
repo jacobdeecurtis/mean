@@ -73,15 +73,11 @@ var blankAttribute = {attributeName: null, score: null, uom: null};
 
 $scope.create = function() {
         var compareGroup = new CompareGroups({
-             optionsKanye: this.optionsKanye,
-             optionName: this.optionName,
-           optionScore: this.optionScore,
-            optionAttributes: this.optionAttributes,
-           attributeName: this.attributeName,
-           optionImportance: this.optionImportance,
-            optionuom: this.optionuom
+            name: $scope.name,
+            picture: $scope.picture,
+            attributes: $scope.attributesArray
         });
-                    
+
              console.log(optionName);
         compareGroup.$save(function(response) {
             $location.path('compareGroups/' + response._id);
@@ -95,19 +91,13 @@ $scope.create = function() {
 
 
 
-
-//     $scope.create = function() {
-//         console.log("In controller");
-//         var compareGroup = new CompareGroups({
-         
-//             // optionsKanye: this.optionsKanye,
-//                 optionName: this.optionName
-//             //     optionScore: this.optionsKanye.optionScore,
-//             // optionAttributes: this.optionAttributes,
-//             //     attributeName: this.optionAttributes.attributeName,
-//             //     optionImportance: this.optionAttributes.optionImportance,
-//             //     optionuom: this.optionAttributes.optionuom
-//         });
+   // optionsKanye: this.optionsKanye,
+   //           optionName: this.optionName,
+   //         optionScore: this.optionScore,
+   //          optionAttributes: this.optionAttributes,
+   //         attributeName: this.attributeName,
+   //         optionImportance: this.optionImportance,
+   //          optionuom: this.optionuom
 
 //         compareGroup.$save(function(response) {
 //               // $location.path('articles/' + response._id);

@@ -11,29 +11,54 @@ var mongoose = require('mongoose'),
  * CompareGroup Schema
  */
 var CompareGroupSchema = new Schema({
-
     created: {
         type: Date,
         default: Date.now
     },
-    optionsKanye: [{
-        optionName: String,
-        optionScore: [Number]
-    }],
-    optionAttributes: [{
+    name: {
+        type: String,
+        default: '',
+        trim: true
+    },
+    picture: {
+        type: String,
+        default: '',
+        trim: true
+    },
+    attributes: [{
         attributeName: String,
-        optionImportance: Number,
-        optionuom: String
+        score: Number,
+        uom: String
     }],
-      user: {
+    user: {
         type: Schema.ObjectId,
         ref: 'User'
     }
+
 });
 
 
   
 
+    // created: {
+    //     type: Date,
+    //     default: Date.now
+    // },
+    // optionsKanye: [{
+    //     optionName: String,
+    //     optionScore: [Number]
+    // }],
+    // optionAttributes: [{
+    //     attributeName: String,
+    //     optionImportance: Number,
+    //     optionuom: String
+    // }],
+    //   user: {
+    //     type: Schema.ObjectId,
+    //     ref: 'User'
+    // }
+
+    
 /**
  * Validations
  */
