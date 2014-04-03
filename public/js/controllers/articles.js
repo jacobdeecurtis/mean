@@ -21,7 +21,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
             //"this" is the same thing as scope
             name: $scope.name,
             picture: $scope.picture,
-            attributes: $scope.attributesArray,
+            attributes: $scope.attributesArray
             // score: this.attributesArray.score
         });
 
