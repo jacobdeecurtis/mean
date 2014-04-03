@@ -78,7 +78,7 @@
 <section ng-controller="CompareGroupsController" ng-init="find()">
 <ul>
 <center>
-    <li class='optionKanyeWest' ng-repeat= "compareGroup in compareGroups">
+    <li class='optionKanyeWest' ng-repeat= "compareGroup in compareGroups | filter:myFilter.name">
       <img class="profile-pic" ng-src='{{compareGroup.picture}}'/>
       </img>
       <h3>{{compareGroup.name}}</h3>

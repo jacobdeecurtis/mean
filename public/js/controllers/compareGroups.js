@@ -78,7 +78,7 @@ $scope.create = function() {
             attributes: $scope.attributesArray
         });
 
-             console.log(optionName);
+          
         compareGroup.$save(function(response) {
             $location.path('compareGroups/' + response._id);
         });
