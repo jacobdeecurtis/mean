@@ -36,8 +36,9 @@ exports.create = function(req, res) {
                 compareGroup: compareGroup
             });
         } else {
+                console.log(optionsKanye);
+            console.log(optionName);
             res.jsonp(compareGroup);
-            console.log("saved");
         }
     });
 };
