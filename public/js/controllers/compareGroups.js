@@ -81,7 +81,8 @@ $scope.create = function() {
            optionImportance: this.optionImportance,
             optionuom: this.optionuom
         });
-
+                    
+             console.log(optionName);
         compareGroup.$save(function(response) {
             $location.path('compareGroups/' + response._id);
         });
@@ -93,7 +94,7 @@ $scope.create = function() {
 
 
 
-console.log('test');
+
 
 //     $scope.create = function() {
 //         console.log("In controller");
