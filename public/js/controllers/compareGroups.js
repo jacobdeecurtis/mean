@@ -75,11 +75,11 @@ $scope.create = function() {
         var compareGroup = new CompareGroups({
              optionsKanye: this.optionsKanye,
              optionName: this.optionName,
-           optionScore: this.optionsKanye.optionScore,
+           optionScore: this.optionScore,
             optionAttributes: this.optionAttributes,
-           attributeName: this.optionAttributes.attributeName,
-           optionImportance: this.optionAttributes.optionImportance,
-            optionuom: this.optionAttributes.optionuom
+           attributeName: this.attributeName,
+           optionImportance: this.optionImportance,
+            optionuom: this.optionuom
         });
 
         compareGroup.$save(function(response) {
