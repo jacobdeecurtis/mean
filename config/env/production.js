@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://localhost/mean',
     app: {
-        name: 'EAN - A Modern Stack - Production'
+        name: 'MEAN - A Modern Stack - Production'
     },
     port: 80,
     PORT: 80,
