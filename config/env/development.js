@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://localhost/mean-dev',
     app: {
-        name: 'EAN - A Modern Stack - Development'
+        name: 'Wiki Decisions'
     },
     port: 4004,
     PORT: 4004,
