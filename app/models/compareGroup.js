@@ -16,7 +16,7 @@ var CompareGroupSchema = new Schema({
         default: Date.now
     },
     name: [
-        type: String,
+         String,
         default: '',
         trim: true]
     ,
