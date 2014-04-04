@@ -27,8 +27,7 @@ var CompareGroupSchema = new Schema({
     },
     optionsKanye: [{
         optionName: String,
-        score: Number,
-        uom: String
+        score: Number
     }],
     user: {
         type: Schema.ObjectId,

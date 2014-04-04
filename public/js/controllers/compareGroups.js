@@ -63,7 +63,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
  // console.log(  $scope.contacts);
 
 
-var blankAttribute = {optionName: null, score: null, uom: null};
+var blankAttribute = {optionName: null, score: null};
     $scope.attributesArray = [blankAttribute]; 
   
     $scope.add_attribute = function() {

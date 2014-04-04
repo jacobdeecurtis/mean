@@ -51,11 +51,11 @@
           <input type="text" class="form-control" ng-model="att.score"  placeholder= "score" required>
         </div>  
           
-        <div class="form-group">
+      <!--   <div class="form-group">
           <div class="col-xs-3">
               <input type="text" class="form-control" ng-model="att.uom" placeholder= "unit of measurement" required>
           </div>
-        </div>  
+        </div>  --> 
       </div>
     </div>
     
@@ -82,11 +82,10 @@
       <img class="profile-pic" ng-src='{{compareGroup.picture}}'/>
       </img>
       <h3>{{compareGroup.name}}</h3>
-      Attributes: 
+      Options: 
       <div class="num-friends" ng-repeat= "optionsKanye in compareGroup.optionsKanye">
           {{optionsKanye.optionName}}:
           {{optionsKanye.score}}
-          {{optionsKanye.uom}}<!-- Scores: {{articles.attributes.score}} Unit of Measurement: {{article.attributes.uom}} -->
       </div>
     </li>
     </center>
