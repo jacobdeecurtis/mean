@@ -172,10 +172,10 @@
     <li class='optionKanyeWest' ng-repeat= "compareGroup in compareGroups | filter:myFilter.name">
       
       <h3>{{compareGroup.name}}</h3>
-      Options: 
-      <div class="num-friends" ng-repeat= "optionsKanye in compareGroup.optionsKanye">
-          {{optionsKanye.optionName}}:
-          {{optionsKanye.score}}
+      Attributes: 
+      <div class="num-friends" ng-repeat= "attribute in compareGroup.attributes">
+          {{attribute.optionName}}:
+          {{attribute.score}}
       </div>
     </li>
     </center>
