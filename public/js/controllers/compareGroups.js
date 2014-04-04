@@ -66,6 +66,7 @@ var blankOption = null;
     $scope.optionsArray = [blankOption]; 
   
     $scope.add_option= function() {
+        console.log(optionsArray);
         var newOption = angular.copy(blankOption);
         $scope.optionsArray.push(newOption);
     };
