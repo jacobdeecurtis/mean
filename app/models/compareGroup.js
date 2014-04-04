@@ -26,7 +26,7 @@ var CompareGroupSchema = new Schema({
         trim: true
     },
     attributes: [{
-        attributeName: String,
+        optionName: String,
         score: Number,
         uom: String
     }],
