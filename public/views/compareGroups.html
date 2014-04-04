@@ -25,13 +25,23 @@
         </div>
     </div>
  -->
-  <form class="form-horizontal" ng-submit="create()"  role="form"  >
+ <!--  <form class="form-horizontal" ng-submit="create()"  role="form"  >
    <div class="form-group">
       <label for="name" class="col-sm-2 control-label" bgcolor="#E6E6FA">Option Name</label>
         <div class="col-sm-10">
-          <input type="optionName" class="form-control" data-ng-model="optionName" id="optionName" placeholder="option" required>
+          <input type="optionName" class="form-control" data-ng-model="name" id="name" placeholder="option" required>
         </div>
+    </div> -->
+
+
+ <img src="/img/icons/glyphicons_432_plus.png" ng-click="add_attribute()">
+    
+    <div ng-repeat="option in optionArray">
+      <div class="row">
+        <input type="text" class="col-xs-3" ng-model="name" id="title" placeholder="option" required>  
+      </div>
     </div>
+
     
    <div class="form-group">
       <center>
@@ -65,16 +75,36 @@
       </div> -->
   </div>
            
-
-
-
-
-
   <li><a href="#">What things influence your decision?</a></li>
   <li><a href="#">More about those things</a></li>
   <li><a href="#">Scores</a></li>
    <li><a href="#">Results</a></li>
 </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <center>

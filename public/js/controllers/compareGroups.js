@@ -62,6 +62,13 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
  // console.log(  $scope.contacts);
 
+var blankOption = null;
+    $scope.optionsArray = [blankOption]; 
+  
+    $scope.add_option= function() {
+        var newOption = angular.copy(blankOption);
+        $scope.optionsArray.push(newOption);
+    };
 
 var blankAttribute = {optionName: null, score: null};
     $scope.attributesArray = [blankAttribute]; 
@@ -73,6 +80,7 @@ var blankAttribute = {optionName: null, score: null};
 
 $scope.create = function() {
         var compareGroup = new CompareGroups({
+            name: $scope.optionsArray,
             optionName: $scope.optionName,
             picture: $scope.picture,
             optionsKanye: $scope.attributesArray
