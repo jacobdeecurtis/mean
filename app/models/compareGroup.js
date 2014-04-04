@@ -15,11 +15,11 @@ var CompareGroupSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    name: {
+    name: [
         type: String,
         default: '',
-        trim: true
-    },
+        trim: true]
+    ,
     picture: {
         type: String,
         default: '',
@@ -39,10 +39,7 @@ var CompareGroupSchema = new Schema({
 
   
 
-    // created: {
-    //     type: Date,
-    //     default: Date.now
-    // },
+    
     // optionsKanye: [{
     //     optionName: String,
     //     optionScore: [Number]
@@ -52,10 +49,7 @@ var CompareGroupSchema = new Schema({
     //     optionImportance: Number,
     //     optionuom: String
     // }],
-    //   user: {
-    //     type: Schema.ObjectId,
-    //     ref: 'User'
-    // }
+    //   
 
     
 /**
