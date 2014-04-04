@@ -146,11 +146,11 @@
           <input type="text" class="form-control" ng-model="att.score"  placeholder= "score" required>
         </div>  
           
-      <!--   <div class="form-group">
+        <div class="form-group">
           <div class="col-xs-3">
-              <input type="text" class="form-control" ng-model="att.uom" placeholder= "unit of measurement" required>
+              <input type="text" class="form-control" ng-model="att.unitOfMeasurement" placeholder= "unit of measurement" required>
           </div>
-        </div>  --> 
+        </div>  
       </div>
     </div>
     
@@ -176,6 +176,7 @@
       <div class="num-friends" ng-repeat= "attribute in compareGroup.attributes">
           {{attribute.attributeName}}:
           {{attribute.score}}
+          {{attribute.unitOfMeasurement}}
       </div>
     </li>
     </center>

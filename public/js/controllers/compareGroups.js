@@ -95,6 +95,7 @@ $scope.create = function() {
             attributeName: $scope.attributeName,
             picture: $scope.picture,
             attributes: $scope.attributesArray
+            unitOfMeasurement: $scope.unitOfMeasurement
         });
 
           

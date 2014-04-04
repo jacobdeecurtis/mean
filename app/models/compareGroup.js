@@ -18,7 +18,8 @@ var CompareGroupSchema = new Schema({
     name: [String],
     attributes: [{
         attributeName: String,
-        score: Number
+        score: Number,
+        unitOfMeasurement: String
     }],
     user: {
         type: Schema.ObjectId,
