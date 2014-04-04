@@ -75,7 +75,7 @@ $scope.create = function() {
         var compareGroup = new CompareGroups({
             optionName: $scope.optionName,
             picture: $scope.picture,
-            attributes: $scope.attributesArray
+            optionsKanye: $scope.attributesArray
         });
 
           
