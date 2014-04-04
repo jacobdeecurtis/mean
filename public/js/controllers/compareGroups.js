@@ -71,17 +71,17 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 //         $scope.optionsArray.push(newOption);
 //     };
 
-var blankAttribute = {optionName: null, score: null};
-$scope.attributesArray = [blankAttribute]; 
+// var blankAttribute = {attributeName: null, score: null};
+// $scope.attributesArray = [blankAttribute]; 
   
-$scope.add_attribute = function() {
-        var newAttr = angular.copy(blankAttribute);
-        $scope.attributesArray.push(newAttr);
-    };
+// $scope.add_attribute = function() {
+//         var newAttr = angular.copy(blankAttribute);
+//         $scope.attributesArray.push(newAttr);
+//     };
 
 
 
-var blankAttribute = {optionName: null, score: null};
+var blankAttribute = {attributeName: null, score: null};
 $scope.attributesArray = [blankAttribute]; 
   
 $scope.add_attribute = function() {
@@ -92,7 +92,7 @@ $scope.add_attribute = function() {
 $scope.create = function() {
         var compareGroup = new CompareGroups({
             name: $scope.optionsArray,
-            optionName: $scope.optionName,
+            attributeName: $scope.attributeName,
             picture: $scope.picture,
             attributes: $scope.attributesArray
         });
