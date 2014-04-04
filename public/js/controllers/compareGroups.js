@@ -94,7 +94,7 @@ $scope.create = function() {
             name: $scope.optionsArray,
             optionName: $scope.optionName,
             picture: $scope.picture,
-            optionsKanye: $scope.attributesArray
+            attributes: $scope.attributesArray
         });
 
           
