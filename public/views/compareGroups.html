@@ -102,7 +102,7 @@
         <input type="text" class="col-xs-3" ng-model="att.attributeName" id="title" placeholder="attribute" required>  
 
         <div class="col-xs-3">
-          <input type="text" class="form-control" ng-model="att.score"  placeholder= "score" required>
+          <input type="text" class="form-control" ng-model="att.importance"  placeholder= "importance" required>
         </div>  
           
         <div class="col-xs-3">
@@ -133,7 +133,7 @@
       Attributes: 
       <div class="num-friends" ng-repeat= "attribute in compareGroup.attributes">
           {{attribute.attributeName}}:
-          {{attribute.score}}
+          {{attribute.importance}}
           {{attribute.unitOfMeasurement}}
       </div>
     </li>

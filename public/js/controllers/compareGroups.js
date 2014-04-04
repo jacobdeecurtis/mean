@@ -81,7 +81,7 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
 
 
-var blankAttribute = {attributeName: null, score: null, unitOfMeasurement: null};
+var blankAttribute = {attributeName: null, importance: null, unitOfMeasurement: null};
 $scope.attributesArray = [blankAttribute]; 
   
 $scope.add_attribute = function() {
