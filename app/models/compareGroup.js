@@ -25,8 +25,8 @@ var CompareGroupSchema = new Schema({
         default: '',
         trim: true
     },
-    attributes: [{
-        attributeName: String,
+    optionsKanye: [{
+        optionName: String,
         score: Number,
         uom: String
     }],
