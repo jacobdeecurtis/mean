@@ -16,11 +16,6 @@ var CompareGroupSchema = new Schema({
         default: Date.now
     },
     name: [String],
-    picture: {
-        type: String,
-        default: '',
-        trim: true
-    },
     optionsKanye: [{
         optionName: String,
         score: Number

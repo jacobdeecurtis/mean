@@ -62,19 +62,29 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 
  // console.log(  $scope.contacts);
 
-var blankOption = null;
-    $scope.optionsArray = [1]; 
+// var blankOption = null;
+// $scope.optionsArray = [blankOption]; 
   
-    $scope.add_option= function() {
-        console.log(optionsArray);
-        var newOption = angular.copy(blankOption);
-        $scope.optionsArray.push(newOption);
-    };
+// $scope.add_option= function() {
+//         console.log(optionsArray);
+//         var newOption = $scope.name;
+//         $scope.optionsArray.push(newOption);
+//     };
 
 var blankAttribute = {optionName: null, score: null};
-    $scope.attributesArray = [blankAttribute]; 
+$scope.attributesArray = [blankAttribute]; 
   
-    $scope.add_attribute = function() {
+$scope.add_attribute = function() {
+        var newAttr = angular.copy(blankAttribute);
+        $scope.attributesArray.push(newAttr);
+    };
+
+
+
+var blankAttribute = {optionName: null, score: null};
+$scope.attributesArray = [blankAttribute]; 
+  
+$scope.add_attribute = function() {
         var newAttr = angular.copy(blankAttribute);
         $scope.attributesArray.push(newAttr);
     };
