@@ -87,10 +87,10 @@
     <label for="name" class="col-sm-2 control-label" bgcolor="#E6E6FA">Name</label>
      <img src="/img/icons/glyphicons_432_plus.png" ng-click="add_option()">
     
-    <div ng-repeat="option in optionsArray">
+    <div ng-repeat="name in optionsArray">
 
       <div class="col-sm-10">
-        <input type="text" class="form-control" ng-model="option" id="name" placeholder="Name" required>
+        <input type="text" class="form-control" ng-model="name" id="name" placeholder="Name" required>
       </div>
   </div>
   </div>
