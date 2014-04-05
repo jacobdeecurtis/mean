@@ -78,6 +78,14 @@ angular.module('mean.compareGroups').controller('CompareGroupsController', ['$sc
 //         $scope.attributesArray.push(newAttr);
 //     };
 
+var blankOption = {attributeName: null, importance: null, unitOfMeasurement: null};
+$scope.optionsArray = [blankOption]; 
+  
+$scope.add_option = function() {
+        var newOpt = angular.copy(blankOption);
+        $scope.optionsArray.push(newOpt);
+    };
+
 
 
 var blankAttribute = {attributeName: null, importance: null, unitOfMeasurement: null};
